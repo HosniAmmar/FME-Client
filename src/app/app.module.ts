@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { AddPlayerComponent } from './Components/add-player/add-player.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ListPlayerComponent } from './Components/list-player/list-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddPlayerComponent
+    AddPlayerComponent,
+    ListPlayerComponent
   ],
   imports: [
     BrowserModule,

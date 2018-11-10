@@ -1,0 +1,77 @@
+<style>
+
+  #overlay {
+    position: fixed;
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    overflow-y: auto;
+
+  }
+  #overlayinside{
+    position: absolute;
+
+    height: 60%;
+    width: 60%;
+
+    right: 20%;
+    top: 5%;
+    left: 20%;
+
+  }
+
+</style>
+<div class="d-flex justify-content-end">
+<button class="btn btn-secondary " (click)="on();">Ajouter</button>
+
+</div>
+<div class="table-responsive">
+  <table class="table">
+
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Photo</th>
+      <th scope="col">N°Licence</th>
+      <th scope="col">Nom et Prenom</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let player of players">
+      <th scope="row">{{player.squadNumber}}</th>
+      <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{player.photoUrl}}"></td>
+      <td>{{player.licenseNumber}}</td>
+      <td>{{player.firstName}} {{player.lastName}}</td>
+      <td><button class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
+      <td><button class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
+      <td><button class="btn btn-danger">
+        <i class="fas fa-trash-alt"></i>
+      </button></td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+<div id="overlay">
+  <div id="overlayinside">
+  <div class="alert alert-light" role="alert">
+    <a class="d-flex justify-content-end" (click)="off();" ><i class="far fa-times-circle"></i>
+    </a>
+  <app-add-player></app-add-player>
+  </div>
+  </div>
+</div>
+

@@ -21,4 +21,9 @@ export class PlayerService {
   addPlayer (player: Player): Observable<Player> {
     return this.http.post<Player>(this.playersUrl, player, httpOptions);
   }
+
+  getPlayerByTeamId(id: number): Observable<Player[]> {
+    const url = `${this.playersUrl}/team/${id}`;
+    return this.http.get<Player[]>(url);
+  }
 }
