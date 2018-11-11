@@ -30,7 +30,7 @@
 
 </style>
 <div class="d-flex justify-content-end">
-<button class="btn btn-secondary " (click)="on();">Ajouter</button>
+ <!-- <button class="btn btn-secondary " (click)="on();"> Ajouter </button> -->
 
 </div>
 <div class="table-responsive">
@@ -44,7 +44,7 @@
       <th scope="col">Nom et Prenom</th>
       <th scope="col"></th>
       <th scope="col"></th>
-      <th scope="col"></th>
+      <th scope="col"><button class="btn btn-secondary " (click)="on();"> <i class="fas fa-plus"></i> Ajouter </button></th>
     </tr>
     </thead>
     <tbody>
@@ -55,7 +55,7 @@
       <td>{{player.firstName}} {{player.lastName}}</td>
       <td><button class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
       <td><button class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
-      <td><button class="btn btn-danger">
+      <td><button (click)="delete(player.id)" class="btn btn-danger">
         <i class="fas fa-trash-alt"></i>
       </button></td>
     </tr>

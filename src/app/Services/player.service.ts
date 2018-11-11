@@ -26,4 +26,9 @@ export class PlayerService {
     const url = `${this.playersUrl}/team/${id}`;
     return this.http.get<Player[]>(url);
   }
+  deletePlayer(id: number): void {
+    alert('deleting' + id);
+    const url = `${this.playersUrl}/${id}`;
+    this.http.delete<Player>(url, httpOptions).subscribe();
+  }
 }

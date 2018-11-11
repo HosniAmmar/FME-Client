@@ -24,6 +24,10 @@ export class ListPlayerComponent implements OnInit {
       this.players = data;
     });
   }
+  delete(id: number): void {
+    alert('clicked delete ' + id);
+    this.playerService.deletePlayer(id);
+  }
   on(): void {
 
     document.getElementById('overlay').style.display = 'block';
