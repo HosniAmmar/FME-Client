@@ -1,0 +1,139 @@
+<form class="form">
+  <h4>Informations Personelles</h4>
+  <hr> <br>
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="nom"> <b> Nom*</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #nom class="form-control" id="nom">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="prenom" > <b>Prenom* </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #prenom class="form-control" id="prenom">
+    </div> </div>
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="dnais"> <b> Date de naissance*</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  #datenaiss class="form-control" id="dnais">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="nat" > <b>Nationalité* </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #nationalite class="form-control" id="nat">
+    </div> </div>
+
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="adresse"> <b> Adresse*</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  class="form-control" #adresse id="adresse">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="cin" > <b>N° CIN* </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #ncin class="form-control" id="cin">
+    </div> </div>
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="ntel"> <b> N° telephone*</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #tel class="form-control" id="ntel">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="mail" > <b>Email </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #email class="form-control" id="mail">
+    </div> </div>
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="fonction"> <b>Fonction</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #fonction class="form-control" id="fonction">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="photo" > <b>Photo </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #photo  class="form-control" id="photo">
+    </div>
+  </div>
+
+
+
+
+  <br> <br> <br> <br>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm">
+      <button class="btn btn-danger" (click)="add(
+0,
+adresse.value,
+datenaiss.value,
+prenom.value,
+fonction.value,
+nom.value,
+email.value,
+ncin.value,
+nationalite.value,
+tel.value,
+photo.value)">enregistrer</button> &nbsp;
+      <button class="btn btn-danger">Annuler</button>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+</form>
