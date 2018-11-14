@@ -1,3 +1,235 @@
-<p>
-  add-player works!
-</p>
+
+<form class="form">
+  <h4>Informations Personelles</h4>
+  <mat-divider></mat-divider> <br>
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="equipe"> <b> Equipe*</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #actualTeamId class="form-control" id="equipe">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="maill" > <b>N° du maillot* </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #squadNumber class="form-control" id="maill">
+    </div> </div>
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="img"> <b> ImageURL</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  #photoUrl class="form-control" id="img">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="nom" > <b>Nom* </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #lastName class="form-control" id="nom">
+    </div> </div>
+
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="dnais"> <b> Date de Naissance*</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  class="form-control" #birthdate id="dnais">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="adress" > <b>Adresse </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #adress class="form-control" id="adress">
+    </div> </div>
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="region"> <b> Region </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  class="form-control" id="region">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="cin" > <b>CIN ou N° de Passport </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #natIdNum class="form-control" id="cin">
+    </div> </div>
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="tel"> <b>N° de Téléphone</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #phone class="form-control" id="tel">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="poid" > <b>Poids </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #weight  class="form-control" id="poid">
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="prenom"> <b>Prénom</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #firstName class="form-control" id="prenom">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="natio" > <b>Nationalité </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #nationality  class="form-control" id="natio">
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="ville"> <b>Ville</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  class="form-control" id="ville">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="licence" > <b>N° de Licence </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #licenseNumber  class="form-control" id="licence">
+    </div>
+  </div>
+
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="category"> <b>Category</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #category class="form-control" id="category">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="emaill" > <b>E-mail </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #mailAdress  class="form-control" id="emaill">
+    </div>
+  </div>
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="taille"> <b>Taille</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #height class="form-control" id="taille">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="ea" > <b>Equipe antérieur </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #previousTeamId  class="form-control" id="ea">
+    </div>
+  </div>
+
+
+
+  <br> <br> <br> <br>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm">
+      <button  class="btn btn-danger" (click)="add(
+  0,
+  licenseNumber.value,
+  firstName.value,
+  lastName.value,
+  squadNumber.value,
+  natIdNum.value,
+  adress.value,
+  phone.value,
+  mailAdress.value,
+  height.value,
+  weight.value,
+  birthdate.value,
+  actualTeamId.value,
+  previousTeamId.value,
+  nationality.value,
+  category.value,
+  photoUrl.value); ">enregistrer</button> &nbsp;
+      <button class="btn btn-danger">Annuler</button>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+</form>
+
+
