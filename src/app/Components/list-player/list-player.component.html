@@ -29,10 +29,35 @@
   }
 
 </style>
-<div class="d-flex justify-content-end">
- <!-- <button class="btn btn-secondary " (click)="on();"> Ajouter </button> -->
+  <div class="dropdown" id="search-component">
 
-</div>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text"><i class="fas fa-search"></i></div>
+      </div>
+      <input #searchBox type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search team" (keyup)="search(searchBox.value)">
+    </div>
+
+    <ul class="dropdown-content">
+      <li class="dropdown-item"*ngFor="let team of teams | async" >
+      <a>
+        <div class="media" (click)="setTeam(team.id)">
+          <img class="mr-3 align-self-center rounded-circle" style="width:20px;height:20px;" src="{{team.logoUrl}}" alt="img">
+          <div class="align-self-center media-body">
+            <h5 class="mt-0">{{team.name}}</h5>
+          </div>
+        </div>
+      </a>
+
+
+
+      </li>
+    </ul>
+  </div>
+
+
+
+
 <div class="table-responsive">
   <table class="table">
 
@@ -48,7 +73,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let player of players">
+    <tr *ngFor="let player of players | async">
       <th scope="row">{{player.squadNumber}}</th>
       <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{player.photoUrl}}"></td>
       <td>{{player.licenseNumber}}</td>
@@ -68,10 +93,12 @@
 <div id="overlay">
   <div id="overlayinside">
   <div class="alert alert-light" role="alert">
-    <a class="d-flex justify-content-end" (click)="off();" ><i class="far fa-times-circle"></i>
+    <a class="d-flex justify-content-end" (click)="off();" >
+      <i class="far fa-times-circle"></i>
     </a>
   <app-add-player></app-add-player>
   </div>
   </div>
 </div>
+
 

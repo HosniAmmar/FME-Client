@@ -10,7 +10,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PlayerService {
-  playersUrl = '//localhost:8081/player';
+  playersUrl = '//localhost:8080/player';
 
   constructor(private http: HttpClient) { }
 
@@ -27,7 +27,6 @@ export class PlayerService {
     return this.http.get<Player[]>(url);
   }
   deletePlayer(id: number): void {
-    alert('deleting' + id);
     const url = `${this.playersUrl}/${id}`;
     this.http.delete<Player>(url, httpOptions).subscribe();
   }
