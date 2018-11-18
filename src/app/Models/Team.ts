@@ -2,10 +2,10 @@ export class Team {
   id: number;
   name: string;
   logoUrl: string;
-  adress: string;
+  address: string;
   region: string;
   creationDate: string;
-  presidentirstName: string;
+  presidentFirstName: string;
   presidentLastName: string;
   presidentPhone: string;
   secretaryFirstName: string;

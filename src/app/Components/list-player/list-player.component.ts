@@ -26,8 +26,6 @@ export class ListPlayerComponent implements OnInit {
     this.players = this.playerListTerms.pipe(
       debounceTime(200),
 
-      // ignore new term if same as previous term
-      // switch to new search observable each time the term changes
       switchMap((term: number) => this.playerService.getPlayerByTeamId(term)),
     );
     this.teams = this.searchTerms.pipe(
