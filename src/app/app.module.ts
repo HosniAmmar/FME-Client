@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddResponsableComponent } from './Components/add-responsable/add-responsable.component';
 import { ListResponsableComponent } from './Components/list-responsable/list-responsable.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     AddResponsableComponent,
     ListResponsableComponent,
     HeaderComponent,
-    FooterComponent
+    DetailResponsableComponent
   ],
   imports: [
     BrowserModule,
