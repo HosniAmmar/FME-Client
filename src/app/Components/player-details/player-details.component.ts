@@ -10,9 +10,9 @@ import {Team} from '../../Models/Team';
   templateUrl: './player-details.component.html',
   styleUrls: ['./player-details.component.css']
 })
-export class PlayerDetailsComponent implements OnInit, OnChanges {
-  @Input() id: number;
-  player: Player;
+export class PlayerDetailsComponent implements OnInit{
+  @Input() player: Player;
+
 
   previousTeam: Team;
   constructor(private playerService: PlayerService , private teamService: TeamService) { }
@@ -20,13 +20,9 @@ export class PlayerDetailsComponent implements OnInit, OnChanges {
    ngOnInit() {
      }
      getPlayer(): void {
-        this.playerService.getPlayer(this.id).subscribe(player => this.player = player);
         this.teamService.getTeam(this.player.previousTeamId).subscribe(team => this.previousTeam = team);
      }
 
- ngOnChanges(changes: SimpleChanges): void {
-    this.getPlayer();
 
-  }
 
 }

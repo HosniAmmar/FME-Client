@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Responsable} from "../../Models/Responsable";
 import {ActivatedRoute} from "@angular/router";
 import {ResponsableService} from "../../Services/responsable.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-list-responsable',
@@ -11,6 +12,7 @@ import {ResponsableService} from "../../Services/responsable.service";
 export class ListResponsableComponent implements OnInit {
 
   responsables: Responsable [];
+  selectedResponsable:Responsable;
   idx = '0';
   constructor(private route: ActivatedRoute, private responsableService: ResponsableService) { }
 
@@ -29,11 +31,27 @@ export class ListResponsableComponent implements OnInit {
     this.responsableService.deleteResponsable(id);
   }
   on(): void {
-
     document.getElementById('overlay').style.display = 'block';
   }
 
   off(): void {
     document.getElementById('overlay').style.display = 'none';
   }
+
+
+  onN(id:number) :void {
+    this.responsableService.getResponsable(id).subscribe(value => {
+      this.selectedResponsable=value;
+    });
+
+    document.getElementById('overlay2').style.display = 'block';
+    alert('clicked affiche ' + id);
+
+  }
+
+  ofF() :void {
+    document.getElementById('overlay2').style.display = 'none';
+  }
 }
+
+

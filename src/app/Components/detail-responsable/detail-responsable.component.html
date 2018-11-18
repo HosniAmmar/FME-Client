@@ -1,0 +1,34 @@
+<form *ngIf="responsablein">
+  <div class="form-group row">
+  <div style="text-align: left;padding-left: 6%" class="col-sm-2" > <img style="width:100px;height:90px;" src="https://images-na.ssl-images-amazon.com/images/I/61Ap23sZcYL._SX355_.jpg"/> </div>
+
+  <div style="margin-top: 3%;text-align: left" class="col-8"><span style="font-weight: bold;font-size: medium;color: black"> Responsable de l'equipe : <br> FC BARCELONE </span></div>
+
+</div>
+
+
+  <mat-divider></mat-divider>
+
+  <br> <br>
+  <div class="form-group row">
+    <div style="text-align: left;padding-left: 6%" class="col-sm-2"> <img class="rounded-circle"  style="width:75px;height:75px;"  src={{responsablein.photoUrl}}/> </div>
+
+    <div style="margin-top: 1%;text-align: left;" class="col-8"><p style="color: black"><b style="font-size: medium">{{responsablein.firstName}} {{responsablein.lastName}}</b> <br> <br>
+    CIN/Passeport: <b>{{responsablein.ncin}}</b> <br>
+    Né(e) le: <b>{{responsablein.birthdate}}</b> <br>
+      Nationalité: <b>{{responsablein.nationality}}</b> <br>
+      Adresse: <b>{{responsablein.adress}}</b> <br>
+      Région: <b>Tunis</b> <br>
+      N°de telephone: <b>{{responsablein.phone}}</b> <br>
+      E-Mail: <b>{{responsablein.mailAdress}}</b> <br>
+      Commentaire: <b>commentaire </b> <br>
+
+    </p>
+    </div>
+
+  </div>
+
+
+
+
+</form>

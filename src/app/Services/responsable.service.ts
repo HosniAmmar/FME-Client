@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ResponsableService {
-  private  responsableUrl = 'http://localhost:8081/responsable';
+  private  responsableUrl = 'http://localhost:8080/responsable';
 
   constructor(private http: HttpClient) { }
 
@@ -28,15 +28,18 @@ export class ResponsableService {
   }
 
 
-  getResponsableById(id: number): Observable<Responsable[]> {
-    const url = `${this.responsableUrl}/${id}`;
-    return this.http.get<Responsable[]>(url);
-  }
   deleteResponsable(id: number): void {
     alert('deleting' + id);
     const url = `${this.responsableUrl}/${id}`;
     this.http.delete<Responsable>(url, httpOptions).subscribe();
   }
+
+  getResponsable(id: number) : Observable<Responsable>{
+    const url = `${this.responsableUrl}/${id}`;
+    return this.http.get<Responsable>(url);
+  }
+
+
 
   /**
    * Handle Http operation that failed.

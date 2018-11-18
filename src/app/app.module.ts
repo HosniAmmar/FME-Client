@@ -13,6 +13,7 @@ import { ListResponsableComponent } from './Components/list-responsable/list-res
 import { HeaderComponent } from './header/header.component';
 import { ListTeamComponent } from './Components/list-team/list-team.component';
 import { PlayerDetailsComponent } from './Components/player-details/player-details.component';
+import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { PlayerDetailsComponent } from './Components/player-details/player-detai
     HeaderComponent,
     ListTeamComponent,
     PlayerDetailsComponent,
-
+    DetailResponsableComponent
   ],
   imports: [
     BrowserModule,
