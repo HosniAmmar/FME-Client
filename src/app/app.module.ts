@@ -12,6 +12,7 @@ import { AddResponsableComponent } from './Components/add-responsable/add-respon
 import { ListResponsableComponent } from './Components/list-responsable/list-responsable.component';
 import { HeaderComponent } from './header/header.component';
 import { ListTeamComponent } from './Components/list-team/list-team.component';
+import { PlayerDetailsComponent } from './Components/player-details/player-details.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ListTeamComponent } from './Components/list-team/list-team.component';
     ListResponsableComponent,
     HeaderComponent,
     ListTeamComponent,
+    PlayerDetailsComponent,
 
   ],
   imports: [

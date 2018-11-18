@@ -18,6 +18,7 @@ export class ListPlayerComponent implements OnInit {
   private playerListTerms = new Subject<number>();
   players: Observable<Player[]>;
   teamId: number;
+  idSelectedPlayer: number;
   constructor(private route: ActivatedRoute, private playerService: PlayerService, private teamService: TeamService) { }
   search(term: string ): void {
     this.searchTerms.next(term);
@@ -61,6 +62,7 @@ export class ListPlayerComponent implements OnInit {
     this.getPlayers(id);
     this.teamId = id;
   }
+
   on(): void {
 
     document.getElementById('overlay').style.display = 'block';
@@ -68,5 +70,12 @@ export class ListPlayerComponent implements OnInit {
 
   off(): void {
     document.getElementById('overlay').style.display = 'none';
+  }
+  offDetails(): void {
+    document.getElementById('overlayDetails').style.display = 'none';
+  }
+  showPlayer(id: number): void {
+    this.idSelectedPlayer = id;
+    document.getElementById('overlayDetails').style.display = 'block';
   }
 }

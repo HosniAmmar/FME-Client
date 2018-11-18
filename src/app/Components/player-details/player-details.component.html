@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-secondary" role="alert">
+        <div class="mx-auto" style="width:max-content;">
+          <h2>N°de Licence: {{player.licenseNumber}}</h2>
+          <h4>Catégorie: {{player.category}}</h4>
+        </div>
+      </div>
+   </div>
+
+  </div>
+  <div class="alert alert-secondary" role="alert">
+<div class="row">
+
+  <div class="col-4">
+    <img class="rounded-circle" style="width:150px;height:150px;" src="{{player.photoUrl}} " onerror="this.src='../../../assets/img/profile_img_alt.jpg';">
+  </div>
+  <div class="col-8">
+    <h3>{{player.lastName}} {{player.firstName}}</h3>
+    <div class="row">
+      <div class="col"><h5>CIN/N° de Passeport :</h5> </div>
+      <div class="col">{{player.natIdNum}}</div>
+    </div>
+    <div class="row">
+      <div class="col"><h5>Né le : </h5></div>
+      <div class="col">{{player.birthdate}}</div>
+    </div>
+    <div class="row">
+    <div class="col"><h5>Nationalité : </h5></div>
+    <div class="col">{{player.nationality}}</div>
+  </div>
+    <div class="row">
+      <div class="col"><h5>Adresse : </h5></div>
+      <div class="col">{{player.address}}</div>
+    </div>
+    <div class="row">
+      <div class="col"><h5>N° de Téléphone : </h5></div>
+      <div class="col">{{player.phone}}</div>
+    </div>
+    <div class="row">
+      <div class="col"><h5>E-Mail : </h5></div>
+      <div class="col">{{player.mailAddress}}</div>
+    </div>
+    <div class="row">
+      <div class="col"><h5>Poids : </h5></div>
+      <div class="col">{{player.weight}}</div>
+    </div>
+    <div class="row">
+      <div class="col"><h5>Taille : </h5></div>
+      <div class="col">{{player.height}}</div>
+    </div>
+    <div class="row">
+      <div class="col"><h5> Equipe Antérieur : </h5></div>
+      <div class="col">{{previousTeam.name}}</div>
+    </div>
+    <div class="row">
+      <div class="col"><h5> Commentaire : </h5></div>
+      <div class="col"></div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
