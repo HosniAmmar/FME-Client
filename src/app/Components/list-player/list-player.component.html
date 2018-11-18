@@ -42,7 +42,7 @@
       <li class="dropdown-item"*ngFor="let team of teams | async" >
       <a>
         <div class="media" (click)="setTeam(team.id)">
-          <img class="mr-3 align-self-center rounded-circle" style="width:20px;height:20px;" src="{{team.logoUrl}}" alt="img">
+          <img class="mr-3 align-self-center rounded-circle" style="width:20px;height:20px;" src="{{team.logoUrl}}" onerror="this.src='../../../assets/img/ftmf.png';" alt="img">
           <div class="align-self-center media-body">
             <h5 class="mt-0">{{team.name}}</h5>
           </div>
@@ -75,7 +75,7 @@
     <tbody>
     <tr *ngFor="let player of players | async">
       <th scope="row">{{player.squadNumber}}</th>
-      <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{player.photoUrl}}"></td>
+      <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{player.photoUrl}} " onerror="this.src='../../../assets/img/profile_img_alt.jpg';"></td>
       <td>{{player.licenseNumber}}</td>
       <td>{{player.firstName}} {{player.lastName}}</td>
       <td><button class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>

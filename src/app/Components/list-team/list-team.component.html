@@ -56,7 +56,7 @@
     <tbody>
     <tr *ngFor="let team of teams$ | async">
       <th scope="row">{{team.id}}</th>
-      <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{team.logoUrl}}"> </td>
+      <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{team.logoUrl}}" onerror="this.src='../../../assets/img/profile_img_alt.jpg';"> </td>
       <td>{{team.name}}</td>
       <td>{{team.division}}</td>
       <td><button class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
