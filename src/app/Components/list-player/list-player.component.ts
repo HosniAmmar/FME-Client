@@ -19,9 +19,13 @@ export class ListPlayerComponent implements OnInit {
   players: Observable<Player[]>;
   teamId: number;
   selectedPlayer: Player;
+  selectedPlayerForUpdate: Player;
   constructor(private route: ActivatedRoute, private playerService: PlayerService, private teamService: TeamService) { }
   search(term: string ): void {
     this.searchTerms.next(term);
+    document.getElementById('searchdropdown').style.display = 'block';
+
+
   }
   ngOnInit() {
     this.players = this.playerListTerms.pipe(
@@ -61,6 +65,8 @@ export class ListPlayerComponent implements OnInit {
   setTeam(id: number) {
     this.getPlayers(id);
     this.teamId = id;
+    document.getElementById('searchdropdown').style.display = 'none';
+
   }
 
   on(): void {
@@ -77,5 +83,14 @@ export class ListPlayerComponent implements OnInit {
   showPlayer(player: Player): void {
     this.selectedPlayer = player;
     document.getElementById('overlayDetails').style.display = 'block';
+  }
+
+  offUpdate(): void {
+    document.getElementById('overlayUpdate').style.display = 'none';
+  }
+  showPlayerUpdate(player: Player): void {
+    this.selectedPlayerForUpdate = player;
+    alert('this.selectedPlayerForUpdate ' + this.selectedPlayerForUpdate.firstName)
+    document.getElementById('overlayUpdate').style.display = 'block';
   }
 }

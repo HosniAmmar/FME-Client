@@ -1,6 +1,5 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {PlayerService} from '../../Services/player.service';
+import {Component, Input, OnInit} from '@angular/core';
+
 import {Player} from '../../Models/Player';
 import {TeamService} from '../../Services/team.service';
 import {Team} from '../../Models/Team';
@@ -15,7 +14,7 @@ export class PlayerDetailsComponent implements OnInit{
 
 
   previousTeam: Team;
-  constructor(private playerService: PlayerService , private teamService: TeamService) { }
+  constructor( private teamService: TeamService) { }
 
    ngOnInit() {
      }

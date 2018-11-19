@@ -11,7 +11,7 @@ const routes: Routes = [
 
   { path: 'player/add', component: AddPlayerComponent},
   { path: 'players', component: ListPlayerComponent},
-  { path: 'teams', component: ListTeamComponent},
+  { path: 'team', component: ListTeamComponent},
 
   {path: 'responsable/add', component: AddResponsableComponent},
   {path: 'responsable/:id' , component: ListResponsableComponent},

@@ -33,4 +33,8 @@ export class PlayerService {
     const url = `${this.playersUrl}/${id}`;
     this.http.delete<Player>(url, httpOptions).subscribe();
   }
+  updatePlayer(player: Player): Observable<any> {
+     return this.http.put<Player>(this.playersUrl, player, httpOptions);
+
+  }
 }
