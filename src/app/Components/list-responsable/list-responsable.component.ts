@@ -46,13 +46,30 @@ export class ListResponsableComponent implements OnInit {
     });
 
     document.getElementById('overlay2').style.display = 'block';
-    alert('clicked affiche ' + id);
 
   }
 
   ofF() :void {
     document.getElementById('overlay2').style.display = 'none';
   }
+
+
+
+  onNUpdate(id:number) :void {
+    this.responsableService.getResponsable(id).subscribe(value => {
+      this.selectedResponsable=value;
+    });
+    document.getElementById('overlay3').style.display = 'block';
+
+  }
+
+  ofFUpdate() :void {
+    document.getElementById('overlay3').style.display = 'none';
+  }
+
+
+
+
 }
 
 
