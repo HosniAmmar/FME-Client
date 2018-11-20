@@ -18,7 +18,15 @@ export class UpdateResponsableComponent implements OnInit {
 
   save(): void {
     this.responsableService.updateResponsable(this.responsablein.id,this.responsablein).subscribe();
+
+    this.close();
   }
+
+  close():void{
+    document.getElementById('overlay3').style.display = 'none';
+  }
+
+
 
 
 }

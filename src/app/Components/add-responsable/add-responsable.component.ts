@@ -39,10 +39,15 @@ export class AddResponsableComponent implements OnInit {
       .subscribe(responsable => {
         this.responsables.push(responsable);
       });
+    this.close();
   }
 
 
   ngOnInit() {
+  }
+
+  close():void{
+    document.getElementById('overlay').style.display = 'none';
   }
 
 }

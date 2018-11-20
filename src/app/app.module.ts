@@ -14,6 +14,7 @@ import { ListResponsableComponent } from './Components/list-responsable/list-res
 import { HeaderComponent } from './header/header.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 import { UpdateResponsableComponent } from './Components/update-responsable/update-responsable.component';
+import { DeleteResponsableComponent } from './Components/delete-responsable/delete-responsable.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UpdateResponsableComponent } from './Components/update-responsable/upda
     ListResponsableComponent,
     HeaderComponent,
     DetailResponsableComponent,
-    UpdateResponsableComponent
+    UpdateResponsableComponent,
+    DeleteResponsableComponent
   ],
   imports: [
     BrowserModule,

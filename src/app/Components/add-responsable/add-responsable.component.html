@@ -1,162 +1,111 @@
-<form>
-  <h4 style="color:black">Informations Personelles</h4>
-  <hr> <br>
-
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="nom"> <b> Nom*</b> </label> </div>
-
-
+<div id="overlay">
+<h3  style="color:black" class="display-5">Informations Personelles</h3>
+<hr> <br>
+<div class="container">
+  <div class="row">
     <div class="col-sm">
-      <input type="text" #nom class="form-control" id="nom">
+      <img id="profileImg" src="../../../assets/img/placeholder.png" class="mr-3 align-self-center rounded-circle" style="width:150px;height:150px;" >
+
+      <div class="form-group">
+        <label>ImageURL</label>
+        <input class="form-control" #photo />
+      </div>
+
+      <div class="form-group">
+        <label>Equipe</label>
+        <input #equipe class="form-control"  />
+      </div>
+
+      <div class="form-group">
+        <label>Fonction</label>
+        <input  class="form-control" #fonction />
+      </div>
+
+
+
     </div>
-
-    <div class="col-sm-2">
-      <label for="prenom" > <b>Prenom* </b> </label> </div>
-
-
     <div class="col-sm">
-      <input type="text" #prenom class="form-control" id="prenom">
-    </div> </div>
+      <div class="form-group">
+        <label>Nom</label>
+        <input class="form-control" #nom />
+      </div>
+
+      <div class="form-group">
+        <label>Date de Naissance</label>
+        <input class="form-control" #datenaiss />
+      </div>
+
+      <div class="form-group">
+        <label>Adresse</label>
+        <input class="form-control" #adresse />
+      </div>
+
+      <div class="form-group">
+        <label>Région</label>
+        <input class="form-control"  />
+      </div>
+
+
+      <div class="form-group">
+        <label>CIN ou N° de Passport</label>
+        <input class="form-control" #ncin />
+      </div>
 
 
 
 
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="dnais"> <b> Date de naissance*</b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text"  #datenaiss class="form-control" id="dnais">
     </div>
-
-    <div class="col-sm-2">
-      <label for="nat" > <b>Nationalité* </b> </label> </div>
-
-
     <div class="col-sm">
-      <input type="text" #nationalite class="form-control" id="nat">
-    </div> </div>
+      <div class="form-group">
+        <label>Prénom</label>
+        <input class="form-control" #prenom />
+      </div>
+
+      <div class="form-group">
+        <label>Nationalité</label>
+        <input class="form-control" #nationalite />
+      </div>
 
 
+      <!--n'existe pas dans la base-->
+      <div class="form-group">
+        <label>Ville</label>
+        <input #ville class="form-control"  />
+      </div>
 
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="adresse"> <b> Adresse*</b> </label> </div>
 
+      <div class="form-group">
+        <label>E-mail</label>
+        <input class="form-control" #email />
+      </div>
 
-    <div class="col-sm">
-      <input type="text"  class="form-control" #adresse id="adresse">
+      <div class="form-group">
+        <label>N° de Téléphone</label>
+        <input class="form-control" #ntel />
+      </div>
+
     </div>
-
-    <div class="col-sm-2">
-      <label for="ville" > <b>Ville* </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text"  #ville class="form-control" id="ville">
-    </div> </div>
-
-
-
-
-
-
-  <div class="form-group row">
-
-    <div class="col-sm-2">
-      <label for="fonction"> <b>Fonction</b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #fonction class="form-control" id="fonction">
-    </div>
-
-
-    <div class="col-sm-2">
-      <label for="equipe"> <b> Equipe*</b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #equipe class="form-control" id="equipe">
-    </div>
-
-
-
-
-
-   </div>
-
-
-
-
-  <div class="form-group row">
-
-
-    <div class="col-sm-2">
-      <label for="cin" > <b>CIN* </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #ncin class="form-control" id="cin">
-    </div>
-
-    <div class="col-sm-2">
-      <label for="tel"> <b>N° téléphone</b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #ntel class="form-control" id="tel">
-    </div>
-
   </div>
-
-  <div class="form-group row">
-
-
-    <div class="col-sm-2">
-      <label for="mail" > <b>Email </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #email  class="form-control" id="mail">
-    </div>
-
-
-
-    <div class="col-sm-2">
-      <label for="photo" > <b>Photo </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #photo  class="form-control" id="photo">
-    </div>
-
-  </div>
-
-
-
-
-
+</div> <br>
+<h3 style="color:black" class="display-5">Informations générale</h3>
+<hr>
 <br>
-  <h4 style="color:black">Informations Générale</h4>
-  <hr style="color:black"> <br>
+
+<div class="container">
 
   <div class="form-group">
     <label>Commentaire</label>
-    <textarea style="color:black" #com class="form-control" rows="5"  ></textarea>
+    <textarea #com class="form-control" rows="5"  ></textarea>
   </div>
 
-
-<br>
-  <div class="form-group row">
-    <div class="col-sm-2">
-
-    </div>
-    <div class="col-sm">
-      <button class="btn btn-danger" (click)="add(
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+        <button class="btn btn-danger" (click)="add(
 0,
 adresse.value,
 datenaiss.value,
@@ -182,15 +131,12 @@ ville.value='';
 com.value='';
 photo.value='';
 equipe.value='';
-
 ">enregistrer</button> &nbsp;
-      <button class="btn btn-danger">Annuler</button>
+        <button (click)="close()" class="btn btn-danger">Annuler</button>
+
+      </div>
+
     </div>
-
-
   </div>
-
-
-
-
-</form>
+</div>
+</div>
