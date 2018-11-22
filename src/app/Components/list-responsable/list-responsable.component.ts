@@ -27,9 +27,23 @@ export class ListResponsableComponent implements OnInit {
       this.responsables = data;
     });
   }
+
+  //interface delete responsable
   delete(id: number): void {
-    this.responsableService.deleteResponsable(id);
+    this.responsableService.getResponsable(id).subscribe(value => {
+      this.selectedResponsable=value;
+    });
+    document.getElementById('overlayDelete').style.display = 'block';
+
   }
+
+  offDelete(): void {
+    document.getElementById('overlayDelete').style.display = 'none';
+  }
+
+
+  //interface d'ajout responsable
+
   on(): void {
     document.getElementById('overlay').style.display = 'block';
   }
@@ -39,20 +53,21 @@ export class ListResponsableComponent implements OnInit {
   }
 
 
+
+//interface detail responsable
   onN(id:number) :void {
     this.responsableService.getResponsable(id).subscribe(value => {
       this.selectedResponsable=value;
     });
-
     document.getElementById('overlay2').style.display = 'block';
     alert('clicked affiche ' + id);
+
 
   }
 
   ofF() :void {
     document.getElementById('overlay2').style.display = 'none';
   }
-
 
 
 

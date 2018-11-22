@@ -14,10 +14,10 @@ import { ListResponsableComponent } from './Components/list-responsable/list-res
 import { HeaderComponent } from './header/header.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 import { UpdateResponsableComponent } from './Components/update-responsable/update-responsable.component';
+import { DeleteResponsableComponent } from './Components/delete-responsable/delete-responsable.component';
 import { ListTeamComponent } from './Components/list-team/list-team.component';
 import { PlayerDetailsComponent } from './Components/player-details/player-details.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
-
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { DetailResponsableComponent } from './Components/detail-responsable/deta
     HeaderComponent,
     DetailResponsableComponent,
     UpdateResponsableComponent,
+    DeleteResponsableComponent,
     ListTeamComponent,
     PlayerDetailsComponent,
     DetailResponsableComponent,
