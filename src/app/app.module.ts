@@ -15,6 +15,8 @@ import { HeaderComponent } from './header/header.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 import { UpdateResponsableComponent } from './Components/update-responsable/update-responsable.component';
 import { ListTeamComponent } from './Components/list-team/list-team.component';
+import { PlayerDetailsComponent } from './Components/player-details/player-details.component';
+import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import { ListTeamComponent } from './Components/list-team/list-team.component';
     DetailResponsableComponent,
     UpdateResponsableComponent,
     ListTeamComponent,
+    PlayerDetailsComponent,
+    DetailResponsableComponent,
     FooterComponent
   ],
   imports: [

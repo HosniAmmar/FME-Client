@@ -9,6 +9,7 @@ import {ListPlayerComponent} from './Components/list-player/list-player.componen
 import {AddResponsableComponent} from './Components/add-responsable/add-responsable.component';
 import {ListResponsableComponent} from './Components/list-responsable/list-responsable.component';
 import {ListTeamComponent} from './Components/list-team/list-team.component';
+import {PlayerDetailsComponent} from './Components/player-details/player-details.component';
 import {AddRefereeComponent} from './Components/add-referee/add-referee.component';
 
 const routes: Routes = [
@@ -19,7 +20,9 @@ const routes: Routes = [
   { path: 'teams', component: ListTeamComponent},
 
   {path: 'responsable/add', component: AddResponsableComponent},
-  {path: 'responsable/:id' , component: ListResponsableComponent}
+  {path: 'responsable/:id' , component: ListResponsableComponent},
+  {path: 'details/:id' , component: PlayerDetailsComponent}
+
 ];
 
 @NgModule({

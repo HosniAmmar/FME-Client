@@ -61,6 +61,7 @@
 
 
 
+
   #overlay3 {
     position: fixed;
     display: none;
@@ -89,9 +90,6 @@
 
   }
 
-
-
-
 </style>
 <div class="d-flex justify-content-end">
   <!-- <button class="btn btn-secondary " (click)="on();"> Ajouter </button> -->
@@ -114,6 +112,8 @@
       <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{responsable.photoUrl}}"></td>
       <td>{{responsable.firstName}} {{responsable.lastName}}</td>
       <td><button  (click)="onN(responsable.id)" class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
+
+      <td><button class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
       <td><button (click)="onNUpdate(responsable.id)" class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
       <td><button (click)="delete(responsable.id)" class="btn btn-danger">
         <i class="fas fa-trash-alt"></i>
@@ -147,9 +147,6 @@
     </div>
   </div>
 </div>
-
-
-
 <div id="overlay3">
   <div id="overlayinside3">
     <div class="alert alert-light" role="alert">

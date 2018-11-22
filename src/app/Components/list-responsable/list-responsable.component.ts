@@ -45,12 +45,14 @@ export class ListResponsableComponent implements OnInit {
     });
 
     document.getElementById('overlay2').style.display = 'block';
+    alert('clicked affiche ' + id);
 
   }
 
   ofF() :void {
     document.getElementById('overlay2').style.display = 'none';
   }
+
 
 
 
@@ -65,8 +67,6 @@ export class ListResponsableComponent implements OnInit {
   ofFUpdate() :void {
     document.getElementById('overlay3').style.display = 'none';
   }
-
-
 
 
 }
