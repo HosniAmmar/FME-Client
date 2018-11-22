@@ -1,0 +1,186 @@
+<form class="form">
+  <h4>Informations Personelles</h4>
+  <mat-divider></mat-divider> <br>
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="nom"> <b> Nom</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #lastName class="form-control" id="nom">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="prenom" > <b>Prénom </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #firstName class="form-control" id="prenom">
+    </div> </div>
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="dateN"> <b> Date de naissance</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  #birthdate class="form-control" id="dateN">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="nat" > <b>Nationalité</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #nationality class="form-control" id="nat">
+    </div> </div>
+
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="addr"> <b> Adresse</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  class="form-control" #adress id="addr">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="vil" > <b>Ville</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #ville class="form-control" id="vil">
+    </div> </div>
+
+
+
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="region"> <b> Region </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #region class="form-control" id="region">
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm"></div>
+
+
+  </div>
+
+
+
+
+
+  <div class="form-group row">
+
+
+    <div class="col-sm-2">
+      <label for="cin" > <b>CIN  </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #ncin class="form-control" id="cin">
+    </div>
+
+
+    <div class="col-sm-2">
+      <label for="Npass" > <b>N de passeport </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #Npassport class="form-control" id="Npass">
+    </div>
+</div>
+
+
+    <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="tel"> <b>N° de Téléphone</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #phone class="form-control" id="tel">
+    </div>
+
+
+
+    <div class="col-sm-2">
+      <label for="email"> <b>E-mail</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #mailAdress class="form-control" id="email">
+    </div></div>
+
+  <div class="form-group row">
+
+    <div class="col-sm-2">
+      <label for="img"> <b> ImageURL</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  #photoUrl class="form-control" id="img">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="badg" > <b>Badge</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #badge  class="form-control" id="badg">
+    </div>
+  </div>
+
+
+
+
+
+  <br> <br> <br> <br>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm">
+      <button  class="btn btn-danger" (click)="add(
+  0,
+  firstName.value,
+  lastName.value,
+  birthdate.value,
+  nationality.value,
+  adress.value,
+  ville.value,
+  region.value,
+  ncin.value,
+  Npassport.value,
+  phone.value,
+  mailAdress.value,
+  photoUrl.value,
+  badge.value); ">enregistrer</button> &nbsp;
+      <button class="btn btn-danger">Annuler</button>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+</form>
+
+
+
