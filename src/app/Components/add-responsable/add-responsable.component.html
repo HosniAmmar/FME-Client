@@ -56,7 +56,7 @@
 
 
     <div class="col-sm">
-      <input type="text"  class="form-control" id="ville">
+      <input type="text"  #ville class="form-control" id="ville">
     </div> </div>
 
 
@@ -80,7 +80,7 @@
 
 
     <div class="col-sm">
-      <input type="text"  class="form-control" id="equipe">
+      <input type="text" #equipe class="form-control" id="equipe">
     </div>
 
 
@@ -146,7 +146,7 @@
 
   <div class="form-group">
     <label>Commentaire</label>
-    <textarea style="color:black" class="form-control" rows="5"  ></textarea>
+    <textarea style="color:black" #com class="form-control" rows="5"  ></textarea>
   </div>
 
 
@@ -166,8 +166,24 @@ nom.value,
 email.value,
 ncin.value,
 nationalite.value,
-tel.value,
-photo.value)">enregistrer</button> &nbsp;
+ntel.value,
+photo.value);
+
+adresse.value='';
+datenaiss.value='';
+prenom.value='';
+fonction.value='';
+nom.value='';
+email.value='';
+ncin.value='';
+nationalite.value='';
+ntel.value='';
+ville.value='';
+com.value='';
+photo.value='';
+equipe.value='';
+
+">enregistrer</button> &nbsp;
       <button class="btn btn-danger">Annuler</button>
     </div>
 
