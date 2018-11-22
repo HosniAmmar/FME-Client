@@ -14,6 +14,9 @@ export class PlayerService {
 
   constructor(private http: HttpClient) { }
 
+  getPlayer(id: number): Observable<Player> {
+    return this.http.get<Player>(`${this.playersUrl}/${id}`);
+  }
   getPlayers(): Observable<Player[]> {
     return this.http.get<Player[]>(this.playersUrl);
   }

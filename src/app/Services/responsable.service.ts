@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ResponsableService {
-  private  responsableUrl = 'http://localhost:8081/responsable';
+  private  responsableUrl = 'http://localhost:8080/responsable';
 
   constructor(private http: HttpClient) { }
 
@@ -38,6 +38,7 @@ export class ResponsableService {
     const url = `${this.responsableUrl}/${id}`;
     return this.http.get<Responsable>(url);
   }
+
 
   updateResponsable(id:number,responsable: Responsable): Observable<any> {
     const url = `${this.responsableUrl}/${id}`;

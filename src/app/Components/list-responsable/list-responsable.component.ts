@@ -60,6 +60,7 @@ export class ListResponsableComponent implements OnInit {
       this.selectedResponsable=value;
     });
     document.getElementById('overlay2').style.display = 'block';
+    alert('clicked affiche ' + id);
 
 
   }
@@ -69,7 +70,7 @@ export class ListResponsableComponent implements OnInit {
   }
 
 
-//interface update responsable
+
   onNUpdate(id:number) :void {
     this.responsableService.getResponsable(id).subscribe(value => {
       this.selectedResponsable=value;
@@ -81,8 +82,6 @@ export class ListResponsableComponent implements OnInit {
   ofFUpdate() :void {
     document.getElementById('overlay3').style.display = 'none';
   }
-
-
 
 
 }

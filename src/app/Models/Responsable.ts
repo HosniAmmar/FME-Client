@@ -3,10 +3,10 @@ export class Responsable {
   adress: string;
   birthdate: string;
   firstName: string;
-  formation:string;
+  formation: string;
   lastName: string;
   mailAdress: string;
-  ncin:string;
+  ncin: string;
   nationality: string;
   phone: string;
   photoUrl: string;
