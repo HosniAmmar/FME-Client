@@ -1,0 +1,130 @@
+<div *ngIf="player">
+<h1 class="display-4">Informations Personelles</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <img id="profileImg" class="mr-3 align-self-center rounded-circle" style="width:200px;height:200px;" src="[(ngModel)]='player.photoUrl'" onerror="this.src='../../../assets/img/profile_img_alt.jpg';" alt="image not found">
+
+      <div class="form-group">
+        <label>ImageURL</label>
+        <input class="form-control" [(ngModel)]="player.photoUrl"  />
+      </div>
+
+      <div class="form-group">
+        <label>Equipe</label>
+        <input class="form-control" [(ngModel)]="player.actualTeamId" />
+      </div>
+
+      <div class="form-group">
+        <label>N° du maillot</label>
+        <input class="form-control" [(ngModel)]="player.squadNumber" />
+      </div>
+
+
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Nom</label>
+        <input class="form-control" [(ngModel)]="player.lastName" />
+      </div>
+
+      <div class="form-group">
+        <label>Date de Naissance</label>
+        <input class="form-control" [(ngModel)]="player.birthdate" />
+      </div>
+
+      <div class="form-group">
+        <label>Adresse</label>
+        <input class="form-control" [(ngModel)]="player.address" />
+      </div>
+
+
+
+      <div class="form-group">
+        <label>CIN ou N° de Passport</label>
+        <input class="form-control" [(ngModel)]="player.natIdNum" />
+      </div>
+
+      <div class="form-group">
+        <label>N° de Téléphone</label>
+        <input class="form-control" [(ngModel)]="player.phone" />
+      </div>
+
+      <div class="form-group">
+        <label>Poids</label>
+        <input class="form-control" [(ngModel)]="player.weight" />
+      </div>
+
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Prénom</label>
+        <input class="form-control" [(ngModel)]="player.firstName" />
+      </div>
+
+      <div class="form-group">
+        <label>Nationalité</label>
+        <input class="form-control" [(ngModel)]="player.nationality" />
+      </div>
+
+
+
+      <div class="form-group">
+        <label>N° de Licence</label>
+        <input class="form-control" [(ngModel)]="player.licenseNumber" />
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <input class="form-control" [(ngModel)]="player.category" />
+      </div>
+
+      <div class="form-group">
+        <label>E-mail</label>
+        <input class="form-control" [(ngModel)]="player.mailAddress" />
+      </div>
+
+      <div class="form-group">
+        <label>Taille</label>
+        <input class="form-control" [(ngModel)]="player.height" />
+      </div>
+    </div>
+  </div>
+</div>
+<h1 class="display-4">Informations générale</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Equipe antérieur</label>
+        <input class="form-control" [(ngModel)]="player.previousTeamId" />
+      </div>
+    </div>
+    <div class="col-sm">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Commentaire</label>
+    <textarea class="form-control" rows="5"  ></textarea>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+        <button type="button" class="btn btn-secondary btn-block btn-lg">Annuler</button>
+      </div>
+      <div class="col-sm">
+        <button class="btn btn-primary btn-block btn-lg" (click)="save()">
+          Sauvgarder
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

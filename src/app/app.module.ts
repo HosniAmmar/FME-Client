@@ -18,6 +18,7 @@ import { DeleteResponsableComponent } from './Components/delete-responsable/dele
 import { ListTeamComponent } from './Components/list-team/list-team.component';
 import { PlayerDetailsComponent } from './Components/player-details/player-details.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
+import { PlayerUpdateComponent } from './Components/player-update/player-update.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { DetailResponsableComponent } from './Components/detail-responsable/deta
     ListTeamComponent,
     PlayerDetailsComponent,
     DetailResponsableComponent,
+    PlayerUpdateComponent,
     FooterComponent
+
   ],
   imports: [
     BrowserModule,
