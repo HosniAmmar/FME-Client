@@ -13,8 +13,8 @@ import {AddRefereeComponent} from './Components/add-referee/add-referee.componen
 import { ListResponsableComponent } from './Components/list-responsable/list-responsable.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
+import { UpdateResponsableComponent } from './Components/update-responsable/update-responsable.component';
 import { ListTeamComponent } from './Components/list-team/list-team.component';
-
 
 
 @NgModule({
@@ -27,6 +27,7 @@ import { ListTeamComponent } from './Components/list-team/list-team.component';
     ListResponsableComponent,
     HeaderComponent,
     DetailResponsableComponent,
+    UpdateResponsableComponent,
     ListTeamComponent,
     FooterComponent
   ],

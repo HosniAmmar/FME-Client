@@ -39,6 +39,11 @@ export class ResponsableService {
     return this.http.get<Responsable>(url);
   }
 
+  updateResponsable(id:number,responsable: Responsable): Observable<any> {
+    const url = `${this.responsableUrl}/${id}`;
+    return this.http.put<Responsable>(url, responsable, httpOptions);
+  }
+
 
 
   /**
