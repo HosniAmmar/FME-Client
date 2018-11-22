@@ -1,4 +1,4 @@
-<form>
+
   <h3>Informations Personelles</h3>
 <div class="container">
   <div class="row">
@@ -37,7 +37,7 @@
 
       <div class="form-group">
         <label>Region</label>
-        <input class="form-control" #lastName />
+        <input class="form-control"  />
       </div>
 
       <div class="form-group">
@@ -69,7 +69,7 @@
 
       <div class="form-group">
         <label>Ville</label>
-        <input class="form-control" #lastName />
+        <input class="form-control"  />
       </div>
 
       <div class="form-group">
@@ -78,13 +78,8 @@
       </div>
 
       <div class="form-group">
-        <label>Catégorie</label>
-        <select class="form-control" #category >
-          <option>Senior</option>
-          <option>2</option>
-          <option>3</option>
-
-        </select>
+        <label>Category</label>
+        <input class="form-control" #category />
       </div>
 
       <div class="form-group">
@@ -116,7 +111,7 @@
   </div>
   <div class="form-group">
     <label>Commentaire</label>
-    <textarea class="form-control" rows="5"  #lastName ></textarea>
+    <textarea class="form-control" rows="5"  ></textarea>
   </div>
 
   <div class="container">
@@ -129,10 +124,28 @@
         <button type="button" class="btn btn-secondary btn-block btn-lg">Annuler</button>
       </div>
       <div class="col-sm">
-        <button type="button" class="btn btn-danger btn-block btn-lg" >
+        <button class="btn btn-primary btn-block btn-lg" (click)="add(
+  0,
+  licenseNumber.value,
+  firstName.value,
+  lastName.value,
+  squadNumber.value,
+  natIdNum.value,
+  adress.value,
+  phone.value,
+  mailAdress.value,
+  height.value,
+  weight.value,
+  birthdate.value,
+  actualTeamId.value,
+  previousTeamId.value,
+  nationality.value,
+  category.value,
+  photoUrl.value); ">
           Enregistrer
         </button>
       </div>
     </div>
   </div>
-</form>
+
+
