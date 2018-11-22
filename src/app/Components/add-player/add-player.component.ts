@@ -10,6 +10,7 @@ import {PlayerService} from '../../Services/player.service';
 export class AddPlayerComponent implements OnInit {
   players: Player[];
   player: Player;
+  img: HTMLImageElement;
   constructor(private playerService: PlayerService) {
   }
   add(
@@ -64,7 +65,8 @@ export class AddPlayerComponent implements OnInit {
     this.getPlayers();
   }
   displayImage(url: string): void {
-    document.getElementById('profileImg').src = url;
+    this.img = <HTMLImageElement> document.getElementById('profileImg');
+    this.img.src = url;
   }
 
 }

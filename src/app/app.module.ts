@@ -12,7 +12,6 @@ import { AddResponsableComponent } from './Components/add-responsable/add-respon
 import {AddRefereeComponent} from './Components/add-referee/add-referee.component';
 import { ListResponsableComponent } from './Components/list-responsable/list-responsable.component';
 import { HeaderComponent } from './header/header.component';
-import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 import { UpdateResponsableComponent } from './Components/update-responsable/update-responsable.component';
 import { DeleteResponsableComponent } from './Components/delete-responsable/delete-responsable.component';
 import { ListTeamComponent } from './Components/list-team/list-team.component';
@@ -34,9 +33,7 @@ import { PlayerUpdateComponent } from './Components/player-update/player-update.
     DeleteResponsableComponent,
     ListTeamComponent,
     PlayerDetailsComponent,
-    DetailResponsableComponent,
-    PlayerUpdateComponent,
-    FooterComponent
+    PlayerUpdateComponent
 
   ],
   imports: [
