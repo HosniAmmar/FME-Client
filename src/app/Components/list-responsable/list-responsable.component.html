@@ -1,3 +1,4 @@
+
 <style>
 
   #overlay {
@@ -59,6 +60,37 @@
   }
 
 
+
+
+
+  #overlay3 {
+    position: fixed;
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    overflow-y: auto;
+  }
+
+  #overlayinside3{
+    position: absolute;
+
+    height: 60%;
+    width: 60%;
+
+    right: 20%;
+    top: 5%;
+    left: 20%;
+
+  }
+
 </style>
 <div class="d-flex justify-content-end">
   <!-- <button class="btn btn-secondary " (click)="on();"> Ajouter </button> -->
@@ -80,8 +112,12 @@
     <tr *ngFor="let responsable of responsables">
       <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{responsable.photoUrl}}"></td>
       <td>{{responsable.firstName}} {{responsable.lastName}}</td>
+
       <td><button  (click)="onN(responsable.id)" class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
+
       <td><button class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
+
+      <td><button (click)="onNUpdate(responsable.id)" class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
       <td><button (click)="delete(responsable.id)" class="btn btn-danger">
         <i class="fas fa-trash-alt"></i>
       </button></td>
@@ -91,19 +127,20 @@
   </table>
 </div>
 
-
+<!-- interface ajout responsable-->
 <div id="overlay">
   <div id="overlayinside">
     <div class="alert alert-light" role="alert">
       <a class="d-flex justify-content-end" (click)="off();" ><i class="far fa-times-circle"></i>
       </a>
-     <app-add-responsable></app-add-responsable>
+      <app-add-responsable></app-add-responsable>
     </div>
   </div>
 </div>
 
 
 
+<!-- interface detail responsable-->
 
 <div id="overlay2">
   <div id="overlayinside2">
@@ -111,6 +148,27 @@
       <a class="d-flex justify-content-end" (click)="ofF();" ><i class="far fa-times-circle"></i>
       </a>
       <app-detail-responsable [responsablein]="selectedResponsable"></app-detail-responsable>
+    </div>
+  </div>
+</div>
+
+<div id="overlay3">
+  <div id="overlayinside3">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="ofFUpdate()" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-update-responsable [responsablein]="selectedResponsable"></app-update-responsable>
+    </div>
+  </div>
+</div>
+
+<!-- interface delete responsable-->
+<div id="overlayDelete">
+  <div id="overlayinsideDelete">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="offDelete()" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-delete-responsable [responsablein]="selectedResponsable"></app-delete-responsable>
     </div>
   </div>
 </div>

@@ -1,0 +1,115 @@
+<div id="overlay3" *ngIf="responsablein">
+  <h3 style="color:black" class="display-5">Informations Personelles</h3>
+  <hr> <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img id="profileImg" src="{{responsablein.photoUrl}}" class="mr-3 align-self-center rounded-circle" style="width:150px;height:150px;" >
+
+        <div class="form-group">
+          <label>ImageURL</label>
+          <input class="form-control" [(ngModel)]="responsablein.photoUrl"  />
+        </div>
+
+        <div class="form-group">
+          <label>Equipe</label>
+          <input class="form-control"  />
+        </div>
+
+        <div class="form-group">
+          <label>Fonction</label>
+          <input  class="form-control" [(ngModel)]="responsablein.formation" />
+        </div>
+
+
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Nom</label>
+          <input class="form-control" [(ngModel)]="responsablein.lastName" />
+        </div>
+
+        <div class="form-group">
+          <label>Date de Naissance</label>
+          <input class="form-control" [(ngModel)]="responsablein.birthdate" />
+        </div>
+
+        <div class="form-group">
+          <label>Adresse</label>
+          <input class="form-control" [(ngModel)]="responsablein.adress" />
+        </div>
+
+        <div class="form-group">
+          <label>Région</label>
+          <input class="form-control"  />
+        </div>
+
+
+        <div class="form-group">
+          <label>CIN ou N° de Passport</label>
+          <input class="form-control" [(ngModel)]="responsablein.ncin" />
+        </div>
+
+
+
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Prénom</label>
+          <input class="form-control" [(ngModel)]="responsablein.firstName" />
+        </div>
+
+        <div class="form-group">
+          <label>Nationalité</label>
+          <input class="form-control" [(ngModel)]="responsablein.nationality" />
+        </div>
+
+
+    <!--n'existe pas dans la base-->
+        <div class="form-group">
+          <label>Ville</label>
+          <input class="form-control"  />
+        </div>
+
+
+        <div class="form-group">
+          <label>E-mail</label>
+          <input class="form-control" [(ngModel)]="responsablein.mailAdress" />
+        </div>
+
+        <div class="form-group">
+          <label>N° de Téléphone</label>
+          <input class="form-control" [(ngModel)]="responsablein.phone" />
+        </div>
+
+      </div>
+    </div>
+  </div> <br>
+  <h3 style="color:black" class="display-5">Informations générale</h3>
+  <hr>
+ <br>
+
+  <div class="container">
+
+  <div class="form-group">
+    <label>Commentaire</label>
+    <textarea class="form-control" rows="5"  ></textarea>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+        <button class="btn btn-danger" (click)="save()">
+          Enregistrer
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

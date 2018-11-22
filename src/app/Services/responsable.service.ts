@@ -40,6 +40,12 @@ export class ResponsableService {
   }
 
 
+  updateResponsable(id:number,responsable: Responsable): Observable<any> {
+    const url = `${this.responsableUrl}/${id}`;
+    return this.http.put<Responsable>(url, responsable, httpOptions);
+  }
+
+
 
   /**
    * Handle Http operation that failed.

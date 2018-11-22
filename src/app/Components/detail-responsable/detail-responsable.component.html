@@ -1,34 +1,69 @@
-<form *ngIf="responsablein">
-  <div class="form-group row">
-  <div style="text-align: left;padding-left: 6%" class="col-sm-2" > <img style="width:100px;height:90px;" src="https://images-na.ssl-images-amazon.com/images/I/61Ap23sZcYL._SX355_.jpg"/> </div>
-
-  <div style="margin-top: 3%;text-align: left" class="col-8"><span style="font-weight: bold;font-size: medium;color: black"> Responsable de l'equipe : <br> FC BARCELONE </span></div>
-
-</div>
-
-
-  <mat-divider></mat-divider>
-
-  <br> <br>
-  <div class="form-group row">
-    <div style="text-align: left;padding-left: 6%" class="col-sm-2"> <img class="rounded-circle"  style="width:75px;height:75px;"  src={{responsablein.photoUrl}}/> </div>
-
-    <div style="margin-top: 1%;text-align: left;" class="col-8"><p style="color: black"><b style="font-size: medium">{{responsablein.firstName}} {{responsablein.lastName}}</b> <br> <br>
-    CIN/Passeport: <b>{{responsablein.ncin}}</b> <br>
-    Né(e) le: <b>{{responsablein.birthdate}}</b> <br>
-      Nationalité: <b>{{responsablein.nationality}}</b> <br>
-      Adresse: <b>{{responsablein.adress}}</b> <br>
-      Région: <b>Tunis</b> <br>
-      N°de telephone: <b>{{responsablein.phone}}</b> <br>
-      E-Mail: <b>{{responsablein.mailAdress}}</b> <br>
-      Commentaire: <b>commentaire </b> <br>
-
-    </p>
+<div class="container" *ngIf="responsablein">
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-secondary" role="alert">
+        <div class="mx-auto" style="width:max-content;">
+          <h2>Responsable de l'equipe: </h2>
+        </div>
+      </div>
     </div>
 
   </div>
+  <div class="alert alert-secondary" role="alert">
+    <div class="row">
 
+      <div class="col-4">
+        <img class="rounded-circle" style="width:150px;height:150px;" src="{{responsablein.photoUrl}} " >
+      </div>
+      <div class="col-8">
+        <h3>{{responsablein.lastName}} {{responsablein.firstName}}</h3>
+        <div class="row">
+          <div class="col"><h5>CIN/N° de Passeport :</h5> </div>
+          <div class="col">{{responsablein.ncin}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>Né le : </h5></div>
+          <div class="col">{{responsablein.birthdate}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>Nationalité : </h5></div>
+          <div class="col">{{responsablein.nationality}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>Adresse : </h5></div>
+          <div class="col">{{responsablein.adress}}</div>
+        </div>
 
+        <div class="row">
+          <div class="col"><h5>Ville : </h5></div>
+          <div class="col"></div>
+        </div>
 
+        <div class="row">
+          <div class="col"><h5>Région : </h5></div>
+          <div class="col"></div>
+        </div>
 
-</form>
+        <div class="row">
+          <div class="col"><h5>N° de Téléphone : </h5></div>
+          <div class="col">{{responsablein.phone}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>E-Mail : </h5></div>
+          <div class="col">{{responsablein.mailAdress}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>Fonction : </h5></div>
+          <div class="col">{{responsablein.formation}}</div>
+        </div>
+
+        <div class="row">
+          <div class="col"><h5> Commentaire </h5></div>
+          <div class="col"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
