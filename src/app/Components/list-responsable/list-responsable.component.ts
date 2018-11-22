@@ -28,7 +28,6 @@ export class ListResponsableComponent implements OnInit {
     });
   }
   delete(id: number): void {
-    alert('clicked delete ' + id);
     this.responsableService.deleteResponsable(id);
   }
   on(): void {
