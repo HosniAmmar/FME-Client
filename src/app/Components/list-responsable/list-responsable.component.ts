@@ -34,6 +34,7 @@ export class ListResponsableComponent implements OnInit {
       this.selectedResponsable=value;
     });
     document.getElementById('overlayDelete').style.display = 'block';
+
   }
 
   offDelete(): void {

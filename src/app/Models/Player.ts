@@ -5,9 +5,9 @@ export class Player {
   lastName: string;
   squadNumber: number;
   natIdNum: string;
-  adress: string;
+  address: string;
   phone: string;
-  mailAdress: string;
+  mailAddress: string;
   height: number;
   weight: number;
   birthdate: string;
