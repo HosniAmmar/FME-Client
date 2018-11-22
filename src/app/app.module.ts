@@ -9,11 +9,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { ListPlayerComponent } from './Components/list-player/list-player.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddResponsableComponent } from './Components/add-responsable/add-responsable.component';
+import {AddRefereeComponent} from './Components/add-referee/add-referee.component';
 import { ListResponsableComponent } from './Components/list-responsable/list-responsable.component';
 import { HeaderComponent } from './header/header.component';
+import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
+import { UpdateResponsableComponent } from './Components/update-responsable/update-responsable.component';
 import { ListTeamComponent } from './Components/list-team/list-team.component';
 import { PlayerDetailsComponent } from './Components/player-details/player-details.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
+
 
 @NgModule({
   declarations: [
@@ -21,11 +25,15 @@ import { DetailResponsableComponent } from './Components/detail-responsable/deta
     AddPlayerComponent,
     ListPlayerComponent,
     AddResponsableComponent,
+    AddRefereeComponent,
     ListResponsableComponent,
     HeaderComponent,
+    DetailResponsableComponent,
+    UpdateResponsableComponent,
     ListTeamComponent,
     PlayerDetailsComponent,
-    DetailResponsableComponent
+    DetailResponsableComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
