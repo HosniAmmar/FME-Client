@@ -11,7 +11,6 @@ export class AddPlayerComponent implements OnInit {
   players: Player[];
   player: Player;
   constructor(private playerService: PlayerService) {
-    console.log('test');
   }
   add(
     id: number,
@@ -20,9 +19,9 @@ export class AddPlayerComponent implements OnInit {
     lastName: string,
     squadNumber: number,
     natIdNum: string,
-    adress: string,
+    addressA: string,
     phone: string,
-    mailAdress: string,
+    mailAddress: string,
     height: number,
     weight: number,
     birthdate: string,
@@ -30,7 +29,10 @@ export class AddPlayerComponent implements OnInit {
     previousTeamId: number,
     nationality: string,
     category: string,
-    photoUrl: string): void {
+    photoUrl: string,
+    region: string,
+    ville: string): void {
+    const address: string = addressA + ',' + ville + ',' + region;
     this.playerService.addPlayer({
       id,
       licenseNumber,
@@ -38,9 +40,9 @@ export class AddPlayerComponent implements OnInit {
       lastName,
       squadNumber,
       natIdNum,
-      adress,
+      address,
       phone,
-      mailAdress,
+      mailAddress,
       height,
       weight,
       birthdate,
@@ -60,6 +62,9 @@ export class AddPlayerComponent implements OnInit {
   }
   ngOnInit() {
     this.getPlayers();
+  }
+  displayImage(url: string): void {
+    document.getElementById('profileImg').src = url;
   }
 
 }

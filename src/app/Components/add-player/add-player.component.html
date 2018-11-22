@@ -3,6 +3,12 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
+      <img id="profileImg" class="mr-3 align-self-center rounded-circle" style="width:200px;height:200px;" src="../../../assets/img/profile_img_alt.jpg" onerror="this.src='../../../assets/img/profile_img_alt.jpg';" alt="image not found">
+
+      <div class="form-group">
+        <label>ImageURL</label>
+        <input class="form-control" #photoUrl (keyup)="displayImage(photoUrl.value)" />
+      </div>
 
       <div class="form-group">
         <label>Equipe</label>
@@ -14,10 +20,7 @@
         <input class="form-control" #squadNumber />
       </div>
 
-      <div class="form-group">
-        <label>ImageURL</label>
-        <input class="form-control" #photoUrl />
-      </div>
+
     </div>
     <div class="col-sm">
       <div class="form-group">
@@ -32,12 +35,12 @@
 
       <div class="form-group">
         <label>Adresse</label>
-        <input class="form-control" #adress />
+        <input class="form-control" #address />
       </div>
 
       <div class="form-group">
         <label>Region</label>
-        <input class="form-control"  />
+        <input class="form-control"  #region/>
       </div>
 
       <div class="form-group">
@@ -69,7 +72,7 @@
 
       <div class="form-group">
         <label>Ville</label>
-        <input class="form-control"  />
+        <input class="form-control" #ville  />
       </div>
 
       <div class="form-group">
@@ -84,7 +87,7 @@
 
       <div class="form-group">
         <label>E-mail</label>
-        <input class="form-control" #mailAdress />
+        <input class="form-control" #mailAddress />
       </div>
 
       <div class="form-group">
@@ -131,9 +134,9 @@
   lastName.value,
   squadNumber.value,
   natIdNum.value,
-  adress.value,
+  address.value,
   phone.value,
-  mailAdress.value,
+  mailAddress.value,
   height.value,
   weight.value,
   birthdate.value,
@@ -141,7 +144,9 @@
   previousTeamId.value,
   nationality.value,
   category.value,
-  photoUrl.value); ">
+  photoUrl.value,
+  region.value,
+  ville.value); ">
         Enregistrer
       </button>
     </div>

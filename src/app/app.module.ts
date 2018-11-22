@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import {MaterielModule} from './MaterielModule';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +14,7 @@ import {AddRefereeComponent} from './Components/add-referee/add-referee.componen
 
 import { ListResponsableComponent } from './Components/list-responsable/list-responsable.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { ListTeamComponent } from './Components/list-team/list-team.component';
 
 
 @NgModule({
@@ -27,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     AddRefereeComponent,
     ListResponsableComponent,
     HeaderComponent,
+    ListTeamComponent,
     FooterComponent
 
   ],
