@@ -1,206 +1,130 @@
 
-<form class="form">
-  <h4>Informations Personelles</h4>
-  <mat-divider></mat-divider> <br>
-
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="equipe"> <b> Equipe*</b> </label> </div>
-
-
+<h1 class="display-4">Informations Personelles</h1>
+<div class="container">
+  <div class="row">
     <div class="col-sm">
-      <input type="text" #actualTeamId class="form-control" id="equipe">
+
+      <div class="form-group">
+        <label>Equipe</label>
+        <input class="form-control" #actualTeamId />
+      </div>
+
+      <div class="form-group">
+        <label>N° du maillot</label>
+        <input class="form-control" #squadNumber />
+      </div>
+
+      <div class="form-group">
+        <label>ImageURL</label>
+        <input class="form-control" #photoUrl />
+      </div>
     </div>
-
-    <div class="col-sm-2">
-      <label for="maill" > <b>N° du maillot* </b> </label> </div>
-
-
     <div class="col-sm">
-      <input type="text" #squadNumber class="form-control" id="maill">
-    </div> </div>
+      <div class="form-group">
+        <label>Nom</label>
+        <input class="form-control" #lastName />
+      </div>
 
+      <div class="form-group">
+        <label>Date de Naissance</label>
+        <input class="form-control" #birthdate />
+      </div>
 
+      <div class="form-group">
+        <label>Adresse</label>
+        <input class="form-control" #adress />
+      </div>
 
+      <div class="form-group">
+        <label>Region</label>
+        <input class="form-control"  />
+      </div>
 
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="img"> <b> ImageURL</b> </label> </div>
+      <div class="form-group">
+        <label>CIN ou N° de Passport</label>
+        <input class="form-control" #natIdNum />
+      </div>
 
+      <div class="form-group">
+        <label>N° de Téléphone</label>
+        <input class="form-control" #phone />
+      </div>
 
-    <div class="col-sm">
-      <input type="text"  #photoUrl class="form-control" id="img">
+      <div class="form-group">
+        <label>Poids</label>
+        <input class="form-control" #weight />
+      </div>
+
     </div>
-
-    <div class="col-sm-2">
-      <label for="nom" > <b>Nom* </b> </label> </div>
-
-
     <div class="col-sm">
-      <input type="text" #lastName class="form-control" id="nom">
-    </div> </div>
+      <div class="form-group">
+        <label>Prénom</label>
+        <input class="form-control" #firstName />
+      </div>
 
+      <div class="form-group">
+        <label>Nationalité</label>
+        <input class="form-control" #nationality />
+      </div>
 
+      <div class="form-group">
+        <label>Ville</label>
+        <input class="form-control"  />
+      </div>
 
+      <div class="form-group">
+        <label>N° de Licence</label>
+        <input class="form-control" #licenseNumber />
+      </div>
 
+      <div class="form-group">
+        <label>Category</label>
+        <input class="form-control" #category />
+      </div>
 
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="dnais"> <b> Date de Naissance*</b> </label> </div>
+      <div class="form-group">
+        <label>E-mail</label>
+        <input class="form-control" #mailAdress />
+      </div>
 
-
-    <div class="col-sm">
-      <input type="text"  class="form-control" #birthdate id="dnais">
-    </div>
-
-    <div class="col-sm-2">
-      <label for="adress" > <b>Adresse </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #adress class="form-control" id="adress">
-    </div> </div>
-
-
-
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="region"> <b> Region </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text"  class="form-control" id="region">
-    </div>
-
-    <div class="col-sm-2">
-      <label for="cin" > <b>CIN ou N° de Passport </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #natIdNum class="form-control" id="cin">
-    </div> </div>
-
-
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="tel"> <b>N° de Téléphone</b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #phone class="form-control" id="tel">
-    </div>
-
-    <div class="col-sm-2">
-      <label for="poid" > <b>Poids </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #weight  class="form-control" id="poid">
+      <div class="form-group">
+        <label>Taille</label>
+        <input class="form-control" #height />
+      </div>
     </div>
   </div>
-
-
-
-
-
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="prenom"> <b>Prénom</b> </label> </div>
-
-
+</div>
+<h1 class="display-4">Informations générale</h1>
+<div class="container">
+  <div class="row">
     <div class="col-sm">
-      <input type="text" #firstName class="form-control" id="prenom">
     </div>
-
-    <div class="col-sm-2">
-      <label for="natio" > <b>Nationalité </b> </label> </div>
-
-
     <div class="col-sm">
-      <input type="text" #nationality  class="form-control" id="natio">
+      <div class="form-group">
+        <label>Equipe antérieur</label>
+        <input class="form-control" #previousTeamId />
+      </div>
+    </div>
+    <div class="col-sm">
     </div>
   </div>
+</div>
+<div class="form-group">
+  <label>Commentaire</label>
+  <textarea class="form-control" rows="5"  ></textarea>
+</div>
 
-
-
-
-
-
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="ville"> <b>Ville</b> </label> </div>
-
-
+<div class="container">
+  <div class="row">
     <div class="col-sm">
-      <input type="text"  class="form-control" id="ville">
-    </div>
-
-    <div class="col-sm-2">
-      <label for="licence" > <b>N° de Licence </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #licenseNumber  class="form-control" id="licence">
-    </div>
-  </div>
-
-
-
-
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="category"> <b>Category</b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #category class="form-control" id="category">
-    </div>
-
-    <div class="col-sm-2">
-      <label for="emaill" > <b>E-mail </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #mailAdress  class="form-control" id="emaill">
-    </div>
-  </div>
-
-
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="taille"> <b>Taille</b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #height class="form-control" id="taille">
-    </div>
-
-    <div class="col-sm-2">
-      <label for="ea" > <b>Equipe antérieur </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #previousTeamId  class="form-control" id="ea">
-    </div>
-  </div>
-
-
-
-  <br> <br> <br> <br>
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-
     </div>
     <div class="col-sm">
-      <button  class="btn btn-danger" (click)="add(
+    </div>
+    <div class="col-sm">
+      <button type="button" class="btn btn-secondary btn-block btn-lg">Annuler</button>
+    </div>
+    <div class="col-sm">
+      <button class="btn btn-primary btn-block btn-lg" (click)="add(
   0,
   licenseNumber.value,
   firstName.value,
@@ -217,19 +141,14 @@
   previousTeamId.value,
   nationality.value,
   category.value,
-  photoUrl.value); ">enregistrer</button> &nbsp;
-      <button class="btn btn-danger">Annuler</button>
+  photoUrl.value); ">
+        Enregistrer
+      </button>
     </div>
-
   </div>
+</div>
 
 
 
-
-
-
-
-
-</form>
 
 
