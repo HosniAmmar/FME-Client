@@ -6,6 +6,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import {any} from 'codelyzer/util/function';
+import {Player} from "../Models/Player";
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -13,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ResponsableService {
-  private  responsableUrl = 'http://localhost:8080/responsable';
+  private  responsableUrl = 'http://localhost:8081/responsable';
 
   constructor(private http: HttpClient) { }
 
@@ -24,6 +25,17 @@ export class ResponsableService {
 
   addResponsable (responsable:Responsable): Observable<Responsable> {
     return this.http.post<Responsable>(this.responsableUrl, responsable, httpOptions);
+  }
+
+
+  getResponsableById(id: number): Observable<Responsable[]> {
+    const url = `${this.responsableUrl}/${id}`;
+    return this.http.get<Responsable[]>(url);
+  }
+  deleteResponsable(id: number): void {
+    alert('deleting' + id);
+    const url = `${this.responsableUrl}/${id}`;
+    this.http.delete<Responsable>(url, httpOptions).subscribe();
   }
 
   /**

@@ -1,5 +1,5 @@
-<form class="form">
-  <h4>Informations Personelles</h4>
+<form>
+  <h4 style="color:black">Informations Personelles</h4>
   <hr> <br>
 
 
@@ -42,8 +42,6 @@
 
 
 
-
-
   <div class="form-group row">
     <div class="col-sm-2">
       <label for="adresse"> <b> Adresse*</b> </label> </div>
@@ -54,36 +52,20 @@
     </div>
 
     <div class="col-sm-2">
-      <label for="cin" > <b>N° CIN* </b> </label> </div>
+      <label for="ville" > <b>Ville* </b> </label> </div>
 
 
     <div class="col-sm">
-      <input type="text" #ncin class="form-control" id="cin">
+      <input type="text"  class="form-control" id="ville">
     </div> </div>
 
 
 
 
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="ntel"> <b> N° telephone*</b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #tel class="form-control" id="ntel">
-    </div>
-
-    <div class="col-sm-2">
-      <label for="mail" > <b>Email </b> </label> </div>
-
-
-    <div class="col-sm">
-      <input type="text" #email class="form-control" id="mail">
-    </div> </div>
-
 
 
   <div class="form-group row">
+
     <div class="col-sm-2">
       <label for="fonction"> <b>Fonction</b> </label> </div>
 
@@ -92,6 +74,58 @@
       <input type="text" #fonction class="form-control" id="fonction">
     </div>
 
+
+    <div class="col-sm-2">
+      <label for="equipe"> <b> Equipe*</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text"  class="form-control" id="equipe">
+    </div>
+
+
+
+
+
+   </div>
+
+
+
+
+  <div class="form-group row">
+
+
+    <div class="col-sm-2">
+      <label for="cin" > <b>CIN* </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #ncin class="form-control" id="cin">
+    </div>
+
+    <div class="col-sm-2">
+      <label for="tel"> <b>N° téléphone</b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #ntel class="form-control" id="tel">
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+
+
+    <div class="col-sm-2">
+      <label for="mail" > <b>Email </b> </label> </div>
+
+
+    <div class="col-sm">
+      <input type="text" #email  class="form-control" id="mail">
+    </div>
+
+
+
     <div class="col-sm-2">
       <label for="photo" > <b>Photo </b> </label> </div>
 
@@ -99,13 +133,24 @@
     <div class="col-sm">
       <input type="text" #photo  class="form-control" id="photo">
     </div>
+
   </div>
 
 
 
 
-  <br> <br> <br> <br>
 
+<br>
+  <h4 style="color:black">Informations Générale</h4>
+  <hr style="color:black"> <br>
+
+  <div class="form-group">
+    <label>Commentaire</label>
+    <textarea style="color:black" class="form-control" rows="5"  ></textarea>
+  </div>
+
+
+<br>
   <div class="form-group row">
     <div class="col-sm-2">
 
@@ -128,10 +173,6 @@ photo.value)">enregistrer</button> &nbsp;
 
 
   </div>
-
-
-
-
 
 
 
