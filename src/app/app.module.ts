@@ -15,6 +15,9 @@ import { HeaderComponent } from './header/header.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 import { UpdateResponsableComponent } from './Components/update-responsable/update-responsable.component';
 import { DeleteResponsableComponent } from './Components/delete-responsable/delete-responsable.component';
+import { AddCommissarComponent} from "./Components/add-commissar/add-commissar.component";
+import { ListCommissaireComponent } from './Components/list-commissaire/list-commissaire.component';
+import { DetailCommissarComponent } from './Components/detail-commissar/detail-commissar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { DeleteResponsableComponent } from './Components/delete-responsable/dele
     HeaderComponent,
     DetailResponsableComponent,
     UpdateResponsableComponent,
-    DeleteResponsableComponent
+    DeleteResponsableComponent,
+    AddCommissarComponent,
+    ListCommissaireComponent,
+    DetailCommissarComponent
   ],
   imports: [
     BrowserModule,
