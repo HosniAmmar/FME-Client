@@ -19,9 +19,7 @@
       <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{commissar.photoUrl}}"></td>
       <td>{{commissar.badge}}</td>
       <td>{{commissar.firstName}} {{commissar.lastName}}</td>
-      <td><button  class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
-
-      <td><button  class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
+      <td><button (click)="onDetail(commissar.id)"  class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
       <td><button class="btn btn-danger">
         <i class="fas fa-trash-alt"></i>
       </button></td>
@@ -31,3 +29,13 @@
   </table>
 </div>
 
+
+<div id="overlay2">
+  <div id="overlayinside2">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="ofF();" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-detail-commissar [commissarIn]="selectedCommissar"></app-detail-commissar>
+    </div>
+  </div>
+</div>

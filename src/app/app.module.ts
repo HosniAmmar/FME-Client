@@ -32,7 +32,7 @@ import { DetailCommissarComponent } from './Components/detail-commissar/detail-c
     DeleteResponsableComponent,
     AddCommissarComponent,
     ListCommissaireComponent,
-    DetailCommissarComponent
+    DetailCommissarComponent,
   ],
   imports: [
     BrowserModule,

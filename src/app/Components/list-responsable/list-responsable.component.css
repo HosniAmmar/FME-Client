@@ -12,18 +12,15 @@
   z-index: 2;
   cursor: pointer;
   overflow-y: auto;
-
 }
+
 #overlayinside{
   position: absolute;
-
   height: 60%;
   width: 60%;
-
   right: 20%;
   top: 5%;
   left: 20%;
-
 }
 
 
@@ -77,10 +74,8 @@
 
 #overlayinside3{
   position: absolute;
-
   height: 60%;
   width: 60%;
-
   right: 20%;
   top: 5%;
   left: 20%;

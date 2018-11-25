@@ -3,7 +3,6 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Responsable} from "../Models/Responsable";
 import {Observable} from "rxjs";
 import {Commissar} from "../Models/Commissar";
-import {Player} from "../Models/Player";
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -24,6 +23,20 @@ export class CommissarService {
   getCommissar(): Observable<Commissar[]> {
     return this.http.get<Commissar[]>(this.commissarUrl);
   }
+
+
+  getCommissarById(id: number) : Observable<Commissar>{
+    const url = `${this.commissarUrl}/${id}`;
+    return this.http.get<Commissar>(url);
+  }
+
+
+  updateCommissar(id:number,commissar:Commissar): Observable<any> {
+    const url = `${this.commissarUrl}/${id}`;
+    return this.http.put<Responsable>(url, commissar, httpOptions);
+  }
+
+
 
 
 
