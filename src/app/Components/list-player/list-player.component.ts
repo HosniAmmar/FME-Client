@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {PlayerService} from '../../Services/player.service';
 import {Player} from '../../Models/Player';
@@ -17,21 +17,26 @@ export class ListPlayerComponent implements OnInit {
   private searchTerms = new Subject<string>();
   private playerListTerms = new Subject<number>();
   players: Observable<Player[]>;
+  playersA: Player[];
+  showAll: boolean ;
   teamId: number;
   selectedPlayer: Player;
   selectedPlayerForUpdate: Player;
   constructor(private route: ActivatedRoute, private playerService: PlayerService, private teamService: TeamService) { }
   search(term: string ): void {
+    if (term !== '') {
+      this.showAll = false;
+    }
     this.searchTerms.next(term);
     document.getElementById('searchdropdown').style.display = 'block';
 
 
   }
   ngOnInit() {
+    this.showAll = true;
     this.players = this.playerListTerms.pipe(
       debounceTime(200),
-
-      switchMap((term: number) => this.playerService.getPlayerByTeamId(term)),
+      switchMap((term: number) => this.playerService.getPlayerByTeamId(term))
     );
     this.teams = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
@@ -43,15 +48,20 @@ export class ListPlayerComponent implements OnInit {
       // switch to new search observable each time the term changes
       switchMap((term: string) => this.teamService.searchTeams(term)),
     );
+    this.playerService.getPlayerByTeamId(0).subscribe( data => {
+      this.playersA = data;
+    });
+
+
+
   }
+
 
 
 
   getPlayers(teamId: number): void {
     this.playerListTerms.next(teamId);
-  //  this.playerService.getPlayerByTeamId(teamId).subscribe( data => {
-  //    this.players = data;
-  //  });
+
   }
   delete(id: number): void {
      // alert('clicked delete ' + id);
@@ -63,6 +73,8 @@ export class ListPlayerComponent implements OnInit {
 
   }
   setTeam(id: number) {
+    this.showAll = false;
+
     this.getPlayers(id);
     this.teamId = id;
     document.getElementById('searchdropdown').style.display = 'none';
@@ -90,7 +102,13 @@ export class ListPlayerComponent implements OnInit {
   }
   showPlayerUpdate(player: Player): void {
     this.selectedPlayerForUpdate = player;
-    alert('this.selectedPlayerForUpdate ' + this.selectedPlayerForUpdate.firstName)
+    alert('this.selectedPlayerForUpdate ' + this.selectedPlayerForUpdate.firstName);
     document.getElementById('overlayUpdate').style.display = 'block';
   }
+
+
+
+
+
+
 }

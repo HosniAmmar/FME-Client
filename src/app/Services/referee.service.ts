@@ -15,7 +15,7 @@ const httpOptions = {
 
 
 export class RefereeService {
-  refereesUrl = '//localhost:8080/referee';
+  refereesUrl = '//localhost:8081/referee';
 
   constructor(private http: HttpClient) { }
 

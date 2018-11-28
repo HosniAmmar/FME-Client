@@ -18,6 +18,8 @@ import { ListTeamComponent } from './Components/list-team/list-team.component';
 import { PlayerDetailsComponent } from './Components/player-details/player-details.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 import { PlayerUpdateComponent } from './Components/player-update/player-update.component';
+import { AddTeamComponent } from './Components/add-team/add-team.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { PlayerUpdateComponent } from './Components/player-update/player-update.
     DeleteResponsableComponent,
     ListTeamComponent,
     PlayerDetailsComponent,
-    PlayerUpdateComponent
+    PlayerUpdateComponent,
+    AddTeamComponent
 
   ],
   imports: [
@@ -42,7 +45,8 @@ import { PlayerUpdateComponent } from './Components/player-update/player-update.
     HttpClientModule,
     AppRoutingModule,
     MaterielModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

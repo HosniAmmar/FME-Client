@@ -11,11 +11,14 @@ import {ListResponsableComponent} from './Components/list-responsable/list-respo
 import {ListTeamComponent} from './Components/list-team/list-team.component';
 import {PlayerDetailsComponent} from './Components/player-details/player-details.component';
 import {AddRefereeComponent} from './Components/add-referee/add-referee.component';
+import {AddTeamComponent} from './Components/add-team/add-team.component';
 
 const routes: Routes = [
 
   { path: 'referee/add', component: AddRefereeComponent},
   { path: 'player/add', component: AddPlayerComponent},
+  { path: 'team/add', component: AddTeamComponent},
+
   { path: 'players', component: ListPlayerComponent},
   { path: 'team', component: ListTeamComponent},
 

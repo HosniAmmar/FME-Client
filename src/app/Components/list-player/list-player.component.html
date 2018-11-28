@@ -28,7 +28,7 @@
 
 
 
-<div class="table-responsive">
+<div *ngIf="showAll" class="table-responsive">
   <table class="table">
 
     <thead>
@@ -43,7 +43,8 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let player of players | async">
+
+    <tr *ngFor="let player of playersA | paginate: { itemsPerPage: 10, currentPage: p }">
       <th scope="row">{{player.squadNumber}}</th>
       <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{player.photoUrl}} " onerror="this.src='../../../assets/img/profile_img_alt.jpg';"></td>
       <td>{{player.licenseNumber}}</td>
@@ -54,10 +55,49 @@
         <i class="fas fa-trash-alt"></i>
       </button></td>
     </tr>
-
     </tbody>
   </table>
+  <div class="mx-auto" style="width: max-content;">
+
+  <pagination-controls class="paginationA" (pageChange)="p = $event" previousLabel="Précédent" nextLabel="Suivant"></pagination-controls>
+  </div>
 </div>
+
+  <div *ngIf="showAll==false;" class="table-responsive">
+
+    <table class="table">
+
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Photo</th>
+        <th scope="col">N°Licence</th>
+        <th scope="col">Nom et Prenom</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"><button class="btn btn-secondary " (click)="on();"> <i class="fas fa-plus"></i> Ajouter </button></th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let player of players | async | paginate: { itemsPerPage: 10, currentPage: p }">
+        <th scope="row">{{player.squadNumber}}</th>
+        <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{player.photoUrl}} " onerror="this.src='../../../assets/img/profile_img_alt.jpg';"></td>
+        <td>{{player.licenseNumber}}</td>
+        <td>{{player.firstName}} {{player.lastName}}</td>
+        <td><button (click)="showPlayer(player)" class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
+        <td><button  (click)="showPlayerUpdate(player)" class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
+        <td><button (click)="delete(player.id)" class="btn btn-danger">
+          <i class="fas fa-trash-alt"></i>
+        </button></td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="mx-auto" style="width: max-content;">
+
+      <pagination-controls class="paginationA" (pageChange)="p = $event" previousLabel="Précédent" nextLabel="Suivant"></pagination-controls>
+    </div>
+  </div>
 
 <!-- Overlays ADD/Details/Update -->
 <div id="overlay">
