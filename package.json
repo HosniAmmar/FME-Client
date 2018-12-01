@@ -28,7 +28,8 @@
     "jquery": "^3.3.1",
     "ngx-pagination": "^3.2.1",
     "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "igniteui-angular": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",

@@ -20,7 +20,7 @@ export class AddPlayerComponent implements OnInit {
     lastName: string,
     squadNumber: number,
     natIdNum: string,
-    addressA: string,
+    address: string,
     phone: string,
     mailAddress: string,
     height: number,
@@ -32,26 +32,31 @@ export class AddPlayerComponent implements OnInit {
     category: string,
     photoUrl: string,
     region: string,
-    ville: string): void {
-    const address: string = addressA + ',' + ville + ',' + region;
+    city: string,
+    comment: string): void {
+    const numpasseport: string = natIdNum;
     this.playerService.addPlayer({
-      id,
-      licenseNumber,
       firstName,
       lastName,
-      squadNumber,
-      natIdNum,
-      address,
       phone,
+      natIdNum,
+        address,
       mailAddress,
       height,
       weight,
       birthdate,
+      nationality,
+      photoUrl,
+      region,
+      city,
+      numpasseport,
+      comment,
+    id,
+      licenseNumber,
+    squadNumber,
       actualTeamId,
       previousTeamId,
-      nationality,
-      category,
-      photoUrl } as Player)
+      category} as Player)
       .subscribe(player => {
         this.players.push(player);
       });

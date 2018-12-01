@@ -48,7 +48,7 @@ export class ListPlayerComponent implements OnInit {
       // switch to new search observable each time the term changes
       switchMap((term: string) => this.teamService.searchTeams(term)),
     );
-    this.playerService.getPlayerByTeamId(0).subscribe( data => {
+    this.playerService.getPlayers().subscribe( data => {
       this.playersA = data;
     });
 

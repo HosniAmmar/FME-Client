@@ -20,7 +20,12 @@ import { DetailResponsableComponent } from './Components/detail-responsable/deta
 import { PlayerUpdateComponent } from './Components/player-update/player-update.component';
 import { AddTeamComponent } from './Components/add-team/add-team.component';
 import {NgxPaginationModule} from 'ngx-pagination';
-
+import { AddMatchComponent } from './Components/add-match/add-match.component';
+import { MatchCalendarComponent } from './Components/match-calendar/match-calendar.component';
+import {
+  IgxCalendarModule,
+  IgxDialogModule
+} from 'igniteui-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +41,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ListTeamComponent,
     PlayerDetailsComponent,
     PlayerUpdateComponent,
-    AddTeamComponent
+    AddTeamComponent,
+    AddMatchComponent,
+    MatchCalendarComponent,
+
 
   ],
   imports: [
@@ -46,7 +54,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
     AppRoutingModule,
     MaterielModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    IgxCalendarModule,
+    IgxDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
