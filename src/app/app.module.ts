@@ -22,10 +22,7 @@ import { AddTeamComponent } from './Components/add-team/add-team.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AddMatchComponent } from './Components/add-match/add-match.component';
 import { MatchCalendarComponent } from './Components/match-calendar/match-calendar.component';
-import {
-  IgxCalendarModule,
-  IgxDialogModule
-} from 'igniteui-angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,9 +51,7 @@ import {
     AppRoutingModule,
     MaterielModule,
     BrowserAnimationsModule,
-    NgxPaginationModule,
-    IgxCalendarModule,
-    IgxDialogModule
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
