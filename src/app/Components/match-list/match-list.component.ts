@@ -21,4 +21,13 @@ export class MatchListComponent implements OnInit {
   offDetails(): void {
     document.getElementById('overlayDetails').style.display = 'none';
   }
+
+  onDelete(match: Match): void {
+    this.selectedMatch = match;
+    document.getElementById('overlayDelete').style.display = 'block';
+  }
+
+  offDelete(): void {
+    document.getElementById('overlayDelete').style.display = 'none';
+  }
 }

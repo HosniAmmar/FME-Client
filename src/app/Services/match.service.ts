@@ -21,4 +21,8 @@ export class MatchService {
     const url = `${this.matchsUrl}/date?date=${date}`;
     return this.http.get<Match[]>(url);
   }
+  deleteMatch(id: number) {
+    const url = `${this.matchsUrl}/${id}`;
+    this.http.delete<Match>(url, httpOptions).subscribe();
+  }
 }
