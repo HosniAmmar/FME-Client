@@ -15,8 +15,8 @@ import {Match} from '../../Models/Match';
 export class AddMatchComponent implements OnInit {
   teams: Team[];
   referees: Referee[];
-  teamA: Team;
-  teamB: Team;
+  imgA: HTMLImageElement;
+  imgB: HTMLImageElement;
 
   constructor(private teamService: TeamService, private refereeService: RefereeService, private matchService: MatchService) { }
 
@@ -27,7 +27,8 @@ export class AddMatchComponent implements OnInit {
   setTeamA(teamid: String) {
     this.teams.forEach(function (value) {
       if ( value.id === Number(teamid)) {
-        document.getElementById('teamAImg').src = value.logoUrl;
+        this.imgA = <HTMLImageElement> document.getElementById('teamAImg');
+        this.imgA.src = value.logoUrl;
       }
     });
   }
@@ -35,7 +36,8 @@ export class AddMatchComponent implements OnInit {
 
     this.teams.forEach(function (value) {
       if ( value.id === Number(teamid)) {
-        document.getElementById('teamBImg').src = value.logoUrl;
+        this.imgB = <HTMLImageElement> document.getElementById('teamBImg');
+        this.imgB.src = value.logoUrl;
 
       }
     });

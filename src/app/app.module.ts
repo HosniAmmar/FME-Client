@@ -22,6 +22,10 @@ import { AddTeamComponent } from './Components/add-team/add-team.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AddMatchComponent } from './Components/add-match/add-match.component';
 import { MatchCalendarComponent } from './Components/match-calendar/match-calendar.component';
+import { SmTeamDetailsComponent } from './Components/sm-team-details/sm-team-details.component';
+import { MatchListComponent } from './Components/match-list/match-list.component';
+import { MatchDetailsComponent } from './Components/match-details/match-details.component';
+import { DeleteMatchComponent } from './Components/delete-match/delete-match.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,10 @@ import { MatchCalendarComponent } from './Components/match-calendar/match-calend
     AddTeamComponent,
     AddMatchComponent,
     MatchCalendarComponent,
+    SmTeamDetailsComponent,
+    MatchListComponent,
+    MatchDetailsComponent,
+    DeleteMatchComponent,
 
 
   ],
