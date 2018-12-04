@@ -3,6 +3,7 @@ import {Team} from '../../Models/Team';
 import {TeamService} from '../../Services/team.service';
 import {Observable, Subject} from 'rxjs';
 import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-list-team',
@@ -11,15 +12,18 @@ import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
 })
 export class ListTeamComponent implements OnInit {
   teams: Team[];
-  teams$: Observable<Team[]>;
+  selectedTeam: Team;
+  idx = '0';
+//  teams: Observable<Team[]>;
   private searchTerms = new Subject<string>();
-  constructor(private teamService: TeamService) { }
+  constructor(private route: ActivatedRoute,private teamService: TeamService) { }
   search(term: string ): void {
     this.searchTerms.next(term);
   }
   ngOnInit() {
 
-    this.teams$ = this.searchTerms.pipe(
+    this.getTeams();
+/*    this.teams$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
       debounceTime(200),
 
@@ -28,14 +32,16 @@ export class ListTeamComponent implements OnInit {
 
       // switch to new search observable each time the term changes
       switchMap((term: string) => this.teamService.searchTeams(term)),
-    );
+    ); */
     }
+
   getTeams(): void {
     this.teamService.getTeams().subscribe( data => {
       this.teams = data;
     });
   }
 
+//interface ajout equipe
   on(): void {
 
     document.getElementById('overlay').style.display = 'block';
@@ -44,4 +50,22 @@ export class ListTeamComponent implements OnInit {
   off(): void {
     document.getElementById('overlay').style.display = 'none';
   }
+
+
+  //interface detail equipe
+  onN(id:number) :void {
+    this.teamService.getTeam(id).subscribe(value => {
+      this.selectedTeam=value;
+    });
+    document.getElementById('overlay2').style.display = 'block';
+  }
+
+  ofF() :void {
+    document.getElementById('overlay2').style.display = 'none';
+  }
+
+
+
+
+
 }
