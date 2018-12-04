@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {  inject } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 import { PlayerDetailsComponent } from './player-details.component';
 
 describe('PlayerDetailsComponent', () => {
@@ -8,9 +9,9 @@ describe('PlayerDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlayerDetailsComponent ]
-    })
-    .compileComponents();
+      imports: [HttpClientModule],
+        declarations: [PlayerDetailsComponent],
+    });
   }));
 
   beforeEach(() => {

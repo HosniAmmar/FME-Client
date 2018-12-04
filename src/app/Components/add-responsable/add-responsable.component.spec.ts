@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {  inject } from '@angular/core/testing';
 import { AddResponsableComponent } from './add-responsable.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AddResponsableComponent', () => {
   let component: AddResponsableComponent;
@@ -8,9 +9,9 @@ describe('AddResponsableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddResponsableComponent ]
-    })
-    .compileComponents();
+      imports: [HttpClientModule],
+        declarations: [AddResponsableComponent],
+    });
   }));
 
   beforeEach(() => {
