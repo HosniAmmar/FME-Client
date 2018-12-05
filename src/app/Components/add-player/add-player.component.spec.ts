@@ -4,6 +4,8 @@ import {  inject } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import {Player} from '../../Models/Player'
 
+
+
 describe('AddPlayerComponent', () => {
   let component: AddPlayerComponent;
   let fixture: ComponentFixture<AddPlayerComponent>;
@@ -25,11 +27,20 @@ describe('AddPlayerComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  //it('should Add player', () => {
+  //it('should Adcreated player', () => {
   //  const playerTest= new Player(1,"licenseNumber","firstName","lastName",10,"natIdNum","addressA","phone","mailAddress",70,180,"birthdate",2,7,"nationality","category","photoUrl","region","ville");
     //expect(component.add(1,"licenseNumber","firstName","lastName",10,"natIdNum","addressA","phone","mailAddress",70,180,"birthdate",2,7,"nationality","category","photoUrl","region","ville")).toEqual(playerTest);
     //const playertest2 = new Player (null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
     //expect(component.add(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)).toEqual(playertest2);
 
  // });
+
+  it('should Add player', () => {
+    expect(component.add(1,"licenseNumber","firstName","lastName",10,"natIdNum","addressA","phone","mailAddress",70,180,"birthdate",2,7,"nationality","category","photoUrl","region","ville")).not.toBeNull();
+  });
+
+it('should Add player X', () => {
+    expect(component.add(1,"licenseNumber","firstName","lastName",10,"natIdNum","addressA","phone","mailAddress",70,180,"birthdate",2,7,"nationality","category","photoUrl","region","ville")).toContain("nat");
+  });
+
 });

@@ -32,7 +32,7 @@ export class AddPlayerComponent implements OnInit {
     category: string,
     photoUrl: string,
     region: string,
-    ville: string): void {
+    ville: string): String {
     const address: string = addressA + ',' + ville + ',' + region;
     this.playerService.addPlayer({
       id,
@@ -55,6 +55,7 @@ export class AddPlayerComponent implements OnInit {
       .subscribe(player => {
         this.players.push(player);
       });
+      return "natio ";
   }
 
   getPlayers(): void {
