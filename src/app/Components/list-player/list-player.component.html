@@ -48,9 +48,9 @@
       <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{player.photoUrl}} " onerror="this.src='../../../assets/img/profile_img_alt.jpg';"></td>
       <td>{{player.licenseNumber}}</td>
       <td>{{player.firstName}} {{player.lastName}}</td>
-      <td><button (click)="showPlayer(player)" class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
-      <td><button  (click)="showPlayerUpdate(player)" class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
-      <td><button (click)="delete(player.id)" class="btn btn-danger">
+      <td><button id="btnshowPlayer" (click)="showPlayer(player)" class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
+      <td><button id="btnshowPlayerUpdate" (click)="showPlayerUpdate(player)" class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
+      <td><button id="btndeletePlayer" (click)="delete(player.id)" class="btn btn-danger">
         <i class="fas fa-trash-alt"></i>
       </button></td>
     </tr>
