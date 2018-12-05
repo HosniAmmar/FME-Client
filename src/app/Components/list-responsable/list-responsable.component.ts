@@ -60,7 +60,6 @@ export class ListResponsableComponent implements OnInit {
       this.selectedResponsable=value;
     });
     document.getElementById('overlay2').style.display = 'block';
-    alert('clicked affiche ' + id);
   }
 
   ofF() :void {

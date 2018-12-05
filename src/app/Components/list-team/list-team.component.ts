@@ -64,6 +64,32 @@ export class ListTeamComponent implements OnInit {
     document.getElementById('overlay2').style.display = 'none';
   }
 
+  //interface update equipe
+  onNUpdate(id:number) :void {
+    this.teamService.getTeam(id).subscribe(value => {
+      this.selectedTeam=value;
+    });
+    document.getElementById('overlay3').style.display = 'block';
+
+  }
+
+  ofFUpdate() :void {
+    document.getElementById('overlay3').style.display = 'none';
+  }
+
+  //interface delete team
+  delete(id: number): void {
+    this.teamService.getTeam(id).subscribe(value => {
+      this.selectedTeam =value;
+    });
+    document.getElementById('overlayDelete').style.display = 'block';
+
+  }
+
+  offDelete(): void {
+    document.getElementById('overlayDelete').style.display = 'none';
+  }
+
 
 
 

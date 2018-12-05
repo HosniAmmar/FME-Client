@@ -20,6 +20,9 @@ import { DetailResponsableComponent } from './Components/detail-responsable/deta
 import { PlayerUpdateComponent } from './Components/player-update/player-update.component';
 import { AddTeamComponent } from './Components/add-team/add-team.component';
 import { DetailTeamComponent } from './Components/detail-team/detail-team.component';
+import { UpdateTeamComponent } from './Components/update-team/update-team.component';
+import { DeleteTeamComponent } from './Components/delete-team/delete-team.component';
+import { MemberTeamComponent } from './Components/member-team/member-team.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { DetailTeamComponent } from './Components/detail-team/detail-team.compon
     PlayerDetailsComponent,
     PlayerUpdateComponent,
     AddTeamComponent,
-    DetailTeamComponent
+    DetailTeamComponent,
+    UpdateTeamComponent,
+    DeleteTeamComponent,
+    MemberTeamComponent
 
   ],
   imports: [

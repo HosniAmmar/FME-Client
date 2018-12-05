@@ -29,8 +29,8 @@
       <td>{{team.name}}</td>
       <td>{{team.division}}</td>
       <td><button  (click)="onN(team.id)" class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
-      <td><button class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
-      <td><button class="btn btn-danger">
+      <td><button (click)="onNUpdate(team.id)" class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
+      <td><button (click)="delete(team.id)" class="btn btn-danger">
         <i class="fas fa-trash-alt"></i>
       </button></td>
     </tr>
@@ -63,3 +63,24 @@
   </div>
 </div>
 
+<!-- interface update team -->
+<div id="overlay3">
+  <div id="overlayinside3">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="ofFUpdate()" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-update-team [teamIn]="selectedTeam"></app-update-team>
+    </div>
+  </div>
+</div>
+
+<!-- interface delete team-->
+<div id="overlayDelete">
+  <div id="overlayinsideDelete">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="offDelete()" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-delete-team [teamIn]="selectedTeam"></app-delete-team>
+    </div>
+  </div>
+</div>
