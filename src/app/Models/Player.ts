@@ -17,5 +17,4 @@ export class Player {
   category: string;
   photoUrl: string;
 
-
 }

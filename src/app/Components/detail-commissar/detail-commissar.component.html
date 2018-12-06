@@ -1,0 +1,92 @@
+<div class="container" *ngIf="commissarIn">
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-secondary" role="alert">
+        <div class="mx-auto" style="width:max-content;">
+          <h2>N° de Badge: {{commissarIn.badge}} </h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="alert alert-secondary" role="alert">
+    <div class="row">
+
+      <div class="col-4">
+        <img class="rounded-circle" style="width:150px;height:150px;" src="{{commissarIn.photoUrl}} " >
+      </div>
+      <div class="col-8">
+        <h3>{{commissarIn.lastName}} {{commissarIn.firstName}}</h3>
+        <div class="row">
+          <div class="col"><h5>CIN/N° de Passeport :</h5> </div>
+          <div class="col"><input id="CinOuPassCommisaire" class="form-control" [(ngModel)]="commissarIn.natIdNum" /></div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>Né le : </h5></div>
+          <div class="col"><input id="DateNaissCommisaire" class="form-control" [(ngModel)]="commissarIn.birthdate" /></div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>Nationalité : </h5></div>
+          <div class="col"><input id="NatCommisaire" class="form-control" [(ngModel)]="commissarIn.nationality" /></div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>Adresse : </h5></div>
+          <div class="col"><input id="AdresseCommisaire" class="form-control" [(ngModel)]="commissarIn.adress" /></div>
+        </div>
+
+        <div class="row">
+          <div class="col"><h5>Ville : </h5></div>
+          <div class="col"><input id="VilleCommisaire" class="form-control" [(ngModel)]="commissarIn.city" /></div>
+        </div>
+
+        <div class="row">
+          <div class="col"><h5>Région : </h5></div>
+          <div class="col"><input id="RegionCommisaire" class="form-control" [(ngModel)]="commissarIn.region" /></div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col"><h5>N° de Téléphone : </h5></div>
+          <div class="col"><input id="TelCommisaire" class="form-control" [(ngModel)]="commissarIn.phone" /></div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>E-Mail : </h5></div>
+          <div class="col"><input id="EmailCommisaire" class="form-control" [(ngModel)]="commissarIn.mailAdress" /></div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>Poids : </h5></div>
+          <div class="col"><input id="PoidsCommisaire" class="form-control" [(ngModel)]="commissarIn.weight" /></div>
+        </div>
+
+        <div class="row">
+          <div class="col"><h5> Taille </h5></div>
+          <div class="col"><input id="TailleCommisaire" class="form-control" [(ngModel)]="commissarIn.height" /></div>
+        </div>
+
+        <div class="row">
+          <div class="col"><h5> Commentaire </h5></div>
+          <div class="col"><input id="CommCommisaire" class="form-control" [(ngModel)]="commissarIn.comment" /></div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="row">
+  <div class="col-5">
+  </div>
+
+
+
+  <div class="col">
+    <button class="btn btn-danger" (click)="save()">
+      Enregistrer
+    </button>
+  </div>
+  </div>
+
+</div>

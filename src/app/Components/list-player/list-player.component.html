@@ -11,7 +11,7 @@
     <ul class="dropdown-content" id="searchdropdown" aria-labelledby="inlineFormInputGroup">
       <li class="dropdown-item" id="searchdropdown-item" *ngFor="let team of teams | async" >
       <a>
-        <div class="media" (click)="setTeam(team.id)">
+        <div class="media"  (click)="setTeam(team.id)">
           <img class="mr-3 align-self-center rounded-circle" style="width:20px;height:20px;" src="{{team.logoUrl}}" onerror="this.src='../../../assets/img/ftmf.png';" alt="img">
           <div class="align-self-center media-body">
             <h5 class="mt-0">{{team.name}}</h5>

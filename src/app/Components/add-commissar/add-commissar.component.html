@@ -1,0 +1,131 @@
+<div id="overlay">
+  <h3  style="color:black" class="display-5">Informations Personelles</h3>
+  <hr> <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img id="profileImg" src="../../../assets/img/placeholder.png" class="mr-3 align-self-center rounded-circle" style="width:150px;height:150px;" >
+
+        <div class="form-group">
+          <label>ImageURL</label>
+          <input id="ImageURLCommisaire" class="form-control" #photoUrl />
+        </div>
+
+        <div class="form-group">
+          <label>*N° de badge </label>
+          <input id="NumBadgeCommisaire"  class="form-control" #badge />
+        </div>
+
+        <div class="form-group">
+          <label>*Equipe</label>
+          <input id="EquipeCommisaire" class="form-control" #equipe />
+        </div>
+
+        <div class="form-group">
+          <label>Poids</label>
+          <input id="PoidsCommisaire" class="form-control" #weight />
+        </div>
+
+
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>*Nom</label>
+          <input id="NomCommisaire" class="form-control" #firstName />
+        </div>
+
+        <div class="form-group">
+          <label>*Date de Naissance</label>
+          <input id="DateNaissCommisaire" class="form-control" #birthdate />
+        </div>
+
+        <div class="form-group">
+          <label>*Adresse</label>
+          <input id="AdresseCommisaire" class="form-control" #adress />
+        </div>
+
+
+
+        <div class="form-group">
+          <label>*N°CIN: </label>
+          <input id="NumCinCommisaire" class="form-control" #natIdNum />
+        </div>
+
+        <div class="form-group">
+          <label>N° de Passport</label>
+          <input id="NumPassCommisaire" class="form-control" #numpasseport />
+        </div>
+
+        <div class="form-group">
+          <label>Taille</label>
+          <input id="TailleCommisaire" class="form-control" #height />
+        </div>
+
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>*Prénom</label>
+          <input id="PrenomCommisaire" class="form-control" #lastName />
+        </div>
+
+        <div class="form-group">
+          <label>*Nationalité</label>
+          <input id="NatCommisaire" class="form-control" #nationality />
+        </div>
+
+
+        <div class="form-group">
+          <label>*Ville</label>
+          <input id="VilleCommisaire" #city class="form-control"  />
+        </div>
+
+        <div class="form-group">
+          <label>Région</label>
+          <input id="RegionCommisaire" class="form-control" #region />
+        </div>
+
+
+        <div class="form-group">
+          <label>E-mail</label>
+          <input id="EmailCommisaire" class="form-control" #mailAdress />
+        </div>
+
+        <div class="form-group">
+          <label>N° de Téléphone</label>
+          <input id="TelCommisaire" class="form-control" #phone />
+        </div>
+
+
+
+      </div>
+    </div>
+  </div> <br>
+  <h3 style="color:black" class="display-5">Informations générale</h3>
+  <hr>
+  <br>
+
+  <div class="container">
+
+    <div class="form-group">
+      <label>Commentaire</label>
+      <textarea id="CommCommisaire" class="form-control" rows="5"  #comment  ></textarea>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <button class="btn btn-danger" (click)="add(0,badge.value,firstName.value,lastName.value,natIdNum.value,adress.value,birthdate.value,phone.value,mailAdress.value,height.value,weight.value,nationality.value,photoUrl.value,region.value,city.value,numpasseport.value,comment.value)">enregistrer</button> &nbsp;
+          <button  class="btn btn-danger">Annuler</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

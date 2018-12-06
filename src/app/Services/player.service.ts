@@ -10,7 +10,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PlayerService {
-  playersUrl = '//localhost:8080/player';
+  playersUrl = '//localhost:8083/player';
 
   constructor(private http: HttpClient) { }
 
