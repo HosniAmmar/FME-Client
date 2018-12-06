@@ -1,0 +1,159 @@
+<div id="overlay">
+  <h3  style="color:black" class="display-5">Informations Personelles</h3>
+  <hr> <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img id="profileImg" src="../../../assets/img/placeholder.png" class="mr-3 align-self-center rounded-circle" style="width:150px;height:150px;" >
+
+        <div class="form-group">
+          <label>ImageURL</label>
+          <input class="form-control" #logoUrl />
+        </div>
+
+
+
+        <div class="form-group">
+          <label>Nom de l'equipe</label>
+          <input  class="form-control" #name />
+        </div>
+
+        <div class="form-group">
+          <label>Division</label>
+          <input #division class="form-control"  />
+        </div>
+
+
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Nom du président*</label>
+          <input class="form-control" #presidentLastName />
+        </div>
+
+        <div class="form-group">
+          <label>N° du téléphone du président</label>
+          <input class="form-control" #presidentPhone />
+        </div>
+
+        <div class="form-group">
+          <label>Adresse</label>
+          <input class="form-control" #address />
+        </div>
+
+        <div class="form-group">
+          <label>Date de création</label>
+          <input class="form-control" #creationDate />
+        </div>
+
+
+        <div class="form-group">
+          <label>N° de téléphone</label>
+          <input class="form-control" #phone />
+        </div>
+
+        <div class="form-group">
+          <label>Terrain principale</label>
+          <input class="form-control" #mainStadium />
+        </div>
+
+        <div class="form-group">
+          <label>Nom du secrétaire:</label>
+          <input class="form-control" #secretaryLastName />
+        </div>
+
+        <div class="form-group">
+          <label>N° de téléphone du secrétaire</label>
+          <input class="form-control" #secretaryPhone />
+        </div>
+
+
+
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Prénom président</label>
+          <input class="form-control" #presidentFirstName />
+        </div>
+
+        <div class="form-group">
+          <label>Région</label>
+          <input class="form-control" #region />
+        </div>
+
+
+
+        <div class="form-group">
+          <label>Email</label>
+          <input #mail class="form-control"  />
+        </div>
+
+
+        <div class="form-group">
+          <label>N° de fax</label>
+          <input class="form-control" #fax />
+        </div>
+
+        <div class="form-group">
+          <label>Adresse du terrain</label>
+          <input class="form-control" #mainStadiumLocation />
+        </div>
+
+        <div class="form-group">
+          <label>Prénom secrétaire</label>
+          <input class="form-control" #secretaryFirstName />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <br>
+  <div class="container">
+
+    <div class="form-group">
+      <label>Commentaire</label>
+      <textarea #teamPhoto class="form-control" rows="5"  ></textarea>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <button class="btn btn-danger" (click)="add(
+          0,
+          name.value,
+          logoUrl.value,
+          address.value,
+          region.value,
+          creationDate.value,
+          presidentFirstName.value,
+          presidentLastName.value,
+          presidentPhone.value,
+          secretaryFirstName.value,
+          secretaryLastName.value,
+          secretaryPhone.value,
+          mail.value,
+          phone.value,
+          fax.value,
+          mainStadium.value,
+          mainStadiumLocation.value,
+          teamPhoto.value,
+          division.value
+       )">enregistrer</button> &nbsp;
+          <button (click)="close()" class="btn btn-danger">Annuler</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

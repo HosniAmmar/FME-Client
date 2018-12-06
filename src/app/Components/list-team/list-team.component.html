@@ -1,34 +1,3 @@
-<style>
-
-  #overlay {
-    position: fixed;
-    display: none;
-
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
-    overflow-y: auto;
-
-  }
-  #overlayinside{
-    position: absolute;
-
-    height: 60%;
-    width: 60%;
-
-    right: 20%;
-    top: 5%;
-    left: 20%;
-
-  }
-
-</style>
 <div class="d-flex justify-content-end">
   <!-- <button class="btn btn-secondary " (click)="on();"> Ajouter </button> -->
 
@@ -54,14 +23,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let team of teams$ | async">
+    <tr *ngFor="let team of teams">
       <th scope="row">{{team.id}}</th>
       <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{team.logoUrl}}" onerror="this.src='../../../assets/img/profile_img_alt.jpg';"> </td>
       <td>{{team.name}}</td>
       <td>{{team.division}}</td>
-      <td><button class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
-      <td><button class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
-      <td><button class="btn btn-danger">
+      <td><button  (click)="onN(team.id)" class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
+      <td><button (click)="onNUpdate(team.id)" class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
+      <td><button (click)="delete(team.id)" class="btn btn-danger">
         <i class="fas fa-trash-alt"></i>
       </button></td>
     </tr>
@@ -70,15 +39,48 @@
   </table>
 </div>
 
-
+<!-- interface add team-->
 <div id="overlay">
   <div id="overlayinside">
     <div class="alert alert-light" role="alert">
       <a class="d-flex justify-content-end" (click)="off();" >
         <i class="far fa-times-circle"></i>
       </a>
-      <app-add-player></app-add-player>
+      <app-add-team></app-add-team>
     </div>
   </div>
 </div>
 
+
+<!--interface detail team -->
+<div id="overlay2">
+  <div id="overlayinside2">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="ofF();" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-detail-team [teamIn]="selectedTeam"> </app-detail-team>
+    </div>
+  </div>
+</div>
+
+<!-- interface update team -->
+<div id="overlay3">
+  <div id="overlayinside3">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="ofFUpdate()" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-update-team [teamIn]="selectedTeam"></app-update-team>
+    </div>
+  </div>
+</div>
+
+<!-- interface delete team-->
+<div id="overlayDelete">
+  <div id="overlayinsideDelete">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="offDelete()" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-delete-team [teamIn]="selectedTeam"></app-delete-team>
+    </div>
+  </div>
+</div>

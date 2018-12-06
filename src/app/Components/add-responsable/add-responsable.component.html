@@ -8,17 +8,17 @@
 
       <div class="form-group">
         <label>ImageURL</label>
-        <input class="form-control" #photo />
+        <input id="ImageURLResponsable" class="form-control" #photo />
       </div>
 
       <div class="form-group">
         <label>Equipe</label>
-        <input #equipe class="form-control"  />
+        <input id="EquipeResponsable" #equipe class="form-control"  />
       </div>
 
       <div class="form-group">
         <label>Fonction</label>
-        <input  class="form-control" #fonction />
+        <input id="FonctionResponsable" class="form-control" #fonction />
       </div>
 
 
@@ -27,28 +27,28 @@
     <div class="col-sm">
       <div class="form-group">
         <label>Nom</label>
-        <input class="form-control" #nom />
+        <input id="NomResponsable" class="form-control" #nom />
       </div>
 
       <div class="form-group">
         <label>Date de Naissance</label>
-        <input class="form-control" #datenaiss />
+        <input id="DateNaissResponsable" class="form-control" #datenaiss />
       </div>
 
       <div class="form-group">
         <label>Adresse</label>
-        <input class="form-control" #adresse />
+        <input id="AdresseResponsable" class="form-control" #adresse />
       </div>
 
       <div class="form-group">
         <label>Région</label>
-        <input class="form-control"  />
+        <input id="RegionResponsable" class="form-control"  />
       </div>
 
 
       <div class="form-group">
         <label>CIN ou N° de Passport</label>
-        <input class="form-control" #ncin />
+        <input id="CinOuPassResponsable" class="form-control" #ncin />
       </div>
 
 
@@ -58,30 +58,30 @@
     <div class="col-sm">
       <div class="form-group">
         <label>Prénom</label>
-        <input class="form-control" #prenom />
+        <input id="PrenomResponsable" class="form-control" #prenom />
       </div>
 
       <div class="form-group">
         <label>Nationalité</label>
-        <input class="form-control" #nationalite />
+        <input id="NatResponsable" class="form-control" #nationalite />
       </div>
 
 
       <!--n'existe pas dans la base-->
       <div class="form-group">
         <label>Ville</label>
-        <input #ville class="form-control"  />
+        <input id="VilleResponsable" #ville class="form-control"  />
       </div>
 
 
       <div class="form-group">
         <label>E-mail</label>
-        <input class="form-control" #email />
+        <input id="EmailResponsable" class="form-control" #email />
       </div>
 
       <div class="form-group">
         <label>N° de Téléphone</label>
-        <input class="form-control" #ntel />
+        <input id="TelResponsable" class="form-control" #ntel />
       </div>
 
     </div>
@@ -95,7 +95,7 @@
 
   <div class="form-group">
     <label>Commentaire</label>
-    <textarea #com class="form-control" rows="5"  ></textarea>
+    <textarea id="CommResponsable" #com class="form-control" rows="5"  ></textarea>
   </div>
 
   <div class="container">
@@ -131,7 +131,7 @@ ville.value='';
 com.value='';
 photo.value='';
 equipe.value='';
-">enregistrer</button> &nbsp;
+">enregistrer</button>  &nbsp;
         <button (click)="close()" class="btn btn-danger">Annuler</button>
 
       </div>

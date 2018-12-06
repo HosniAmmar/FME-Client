@@ -24,8 +24,7 @@ export class ListPlayerComponent implements OnInit {
   search(term: string ): void {
     this.searchTerms.next(term);
     document.getElementById('searchdropdown').style.display = 'block';
-
-
+    
   }
   ngOnInit() {
     this.players = this.playerListTerms.pipe(
