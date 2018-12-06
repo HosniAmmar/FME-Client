@@ -14,28 +14,38 @@ export class AddResponsableComponent implements OnInit {
 
   add(
     id:Number,
-  adress: string,
-  birthdate: string,
-  firstName: string,
-  formation:string,
-  lastName: string,
-  mailAdress: string,
-    ncin:string,
+    firstName: string,
+    lastName: string,
+    natIdNum:string,
+
+    adress: string,
+   birthdate: string,
+    phone: string,
+    mailAdress: string,
+
+    fonction:string,
   nationality: string,
-  phone: string,
-  photoUrl: string): void {
+  photoUrl: string,
+    region:string,
+    city:string,
+    numpasseport:string,
+    comment:string): void {
     this.responsableService.addResponsable({
       id,
+      firstName,
+      lastName,
+      natIdNum,
       adress,
       birthdate,
-      firstName,
-      formation,
-      lastName,
-      mailAdress,
-      ncin,
-      nationality,
       phone,
-      photoUrl } as Responsable)
+      mailAdress,
+      fonction,
+      nationality,
+      photoUrl,
+      region,
+      city,
+      numpasseport,
+      comment} as Responsable)
       .subscribe(responsable => {
         this.responsables.push(responsable);
       });

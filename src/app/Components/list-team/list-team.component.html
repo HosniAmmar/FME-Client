@@ -1,13 +1,13 @@
 <div class="d-flex justify-content-end">
   <!-- <button class="btn btn-secondary " (click)="on();"> Ajouter </button> -->
 
-  <div class="input-group mb-2">
-    <div class="input-group-prepend">
-      <div class="input-group-text"><i class="fas fa-search"></i></div>
-    </div>
+  <!--  <div class="input-group mb-2">
+     <div class="input-group-prepend">
+       <div class="input-group-text"><i class="fas fa-search"></i></div>
+     </div>
     <input #searchBox type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search team" (keyup)="search(searchBox.value)">
   </div>
-</div>
+</div> -->
 <div class="table-responsive">
   <table class="table">
 
@@ -19,7 +19,7 @@
       <th scope="col">Division</th>
       <th scope="col"></th>
       <th scope="col"></th>
-      <th scope="col"><button class="btn btn-secondary " (click)="on();"> <i class="fas fa-plus"></i> Ajouter </button></th>
+      <th scope="col"><button class="btn btn-danger" (click)="on();"> <i class="fas fa-plus"></i> Ajouter </button></th>
     </tr>
     </thead>
     <tbody>
@@ -28,10 +28,11 @@
       <td><img class="rounded-circle" style="width:40px;height:40px;" src="{{team.logoUrl}}" onerror="this.src='../../../assets/img/profile_img_alt.jpg';"> </td>
       <td>{{team.name}}</td>
       <td>{{team.division}}</td>
-      <td><button  (click)="onN(team.id)" class="btn btn-secondary"><i class="far fa-address-card"></i></button></td>
-      <td><button (click)="onNUpdate(team.id)" class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
+      <td><button type="button" (click)="onN(team.id)" class="btn btn-danger">Détails  </button>
+         </td>
+      <td><button (click)="onNUpdate(team.id)" class="btn btn-danger">Modifier</button></td>
       <td><button (click)="delete(team.id)" class="btn btn-danger">
-        <i class="fas fa-trash-alt"></i>
+        Supprimer
       </button></td>
     </tr>
 

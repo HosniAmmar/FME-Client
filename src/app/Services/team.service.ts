@@ -42,7 +42,6 @@ export class TeamService {
   }
 
   deleteTeam(id: number): void {
-    alert('deleting' + id);
     const url = `${this.teamUrl}/${id}`;
     this.http.delete<Team>(url, httpOptions).subscribe();
   }

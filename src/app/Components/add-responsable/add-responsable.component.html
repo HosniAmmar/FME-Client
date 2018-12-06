@@ -8,7 +8,7 @@
 
       <div class="form-group">
         <label>ImageURL</label>
-        <input class="form-control" #photo />
+        <input class="form-control" #photoUrl />
       </div>
 
       <div class="form-group">
@@ -27,61 +27,65 @@
     <div class="col-sm">
       <div class="form-group">
         <label>Nom</label>
-        <input class="form-control" #nom />
+        <input class="form-control" #firstName />
       </div>
 
       <div class="form-group">
         <label>Date de Naissance</label>
-        <input class="form-control" #datenaiss />
+        <input class="form-control" #birthdate />
       </div>
 
       <div class="form-group">
         <label>Adresse</label>
-        <input class="form-control" #adresse />
+        <input class="form-control" #adress />
       </div>
 
-      <div class="form-group">
-        <label>Région</label>
-        <input class="form-control"  />
-      </div>
 
 
       <div class="form-group">
-        <label>CIN ou N° de Passport</label>
-        <input class="form-control" #ncin />
+        <label>N°CIN: </label>
+        <input class="form-control" #natIdNum />
       </div>
 
-
+      <div class="form-group">
+        <label>N° de Passport</label>
+        <input class="form-control" #numpasseport />
+      </div>
 
 
     </div>
     <div class="col-sm">
       <div class="form-group">
         <label>Prénom</label>
-        <input class="form-control" #prenom />
+        <input class="form-control" #lastName />
       </div>
 
       <div class="form-group">
         <label>Nationalité</label>
-        <input class="form-control" #nationalite />
+        <input class="form-control" #nationality />
       </div>
 
 
       <!--n'existe pas dans la base-->
       <div class="form-group">
         <label>Ville</label>
-        <input #ville class="form-control"  />
+        <input #city class="form-control"  />
+      </div>
+
+      <div class="form-group">
+        <label>Région</label>
+        <input  class="form-control" #region />
       </div>
 
 
       <div class="form-group">
         <label>E-mail</label>
-        <input class="form-control" #email />
+        <input class="form-control" #mailAdress />
       </div>
 
       <div class="form-group">
         <label>N° de Téléphone</label>
-        <input class="form-control" #ntel />
+        <input class="form-control" #phone />
       </div>
 
     </div>
@@ -95,7 +99,7 @@
 
   <div class="form-group">
     <label>Commentaire</label>
-    <textarea #com class="form-control" rows="5"  ></textarea>
+    <textarea class="form-control" rows="5"  #comment  ></textarea>
   </div>
 
   <div class="container">
@@ -107,31 +111,25 @@
       <div class="col-sm">
         <button class="btn btn-danger" (click)="add(
 0,
-adresse.value,
-datenaiss.value,
-prenom.value,
+firstName.value,
+lastName.value,
+natIdNum.value,
+adress.value,
+birthdate.value,
+phone.value,
+mailAdress.value,
 fonction.value,
-nom.value,
-email.value,
-ncin.value,
-nationalite.value,
-ntel.value,
-photo.value);
 
-adresse.value='';
-datenaiss.value='';
-prenom.value='';
-fonction.value='';
-nom.value='';
-email.value='';
-ncin.value='';
-nationalite.value='';
-ntel.value='';
-ville.value='';
-com.value='';
-photo.value='';
-equipe.value='';
-">enregistrer</button>  &nbsp;
+nationality.value,
+
+photoUrl.value,
+
+region.value,
+city.value,
+numpasseport.value,
+comment.value);
+
+">enregistrer</button> &nbsp;
         <button (click)="close()" class="btn btn-danger">Annuler</button>
 
       </div>
