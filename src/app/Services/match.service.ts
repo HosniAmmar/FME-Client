@@ -9,7 +9,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class MatchService {
-  matchsUrl = '//localhost:8083/match';
+  matchsUrl = '//localhost:8083/matchD';
   constructor(private http: HttpClient) { }
   addMatch (match: Match): Observable<Match> {
     return this.http.post<Match>(this.matchsUrl, match, httpOptions);

@@ -1,4 +1,4 @@
-import {Match} from './Match';
+import {Match} from '../Models/Match';
 
 export class CalendarDay {
   date: number;

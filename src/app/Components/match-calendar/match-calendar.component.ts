@@ -4,6 +4,7 @@ import {CalendarDay} from '../../Models/CalendarDay';
 import {Match} from '../../Models/Match';
 
 
+
 @Component({
   selector: 'app-match-calendar',
   templateUrl: './match-calendar.component.html',
@@ -129,6 +130,14 @@ export class MatchCalendarComponent implements OnInit {
   off(): void {
     document.getElementById('overlay').style.display = 'none';
   }
+  onAddMatch(): void {
+    document.getElementById('overlayAdd').style.display = 'block';
+  }
+
+  offAddMatch(): void {
+    document.getElementById('overlayAdd').style.display = 'none';
+  }
+
 
 
 }

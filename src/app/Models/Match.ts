@@ -1,8 +1,10 @@
+import {Team} from './Team';
+
 export class Match {
 
   id: number;
-  idEquipe1: number;
-  idEquipe2: number;
+  equipe1: Team;
+  equipe2: Team;
   date: string;
   heure: string;
   place: string;

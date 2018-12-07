@@ -2,7 +2,10 @@
 <div class="card" style="width: 90%; margin: 5% 5% 5% 5%;  padding: 5% 5% 5% 5%;">
   <div class="row card-img-top">
     <div class="col">
-      <app-sm-team-details [teamId]="match.idEquipe1"></app-sm-team-details>
+     <!-- <app-sm-team-details [team]="match.equipe1"></app-sm-team-details> -->
+      <img class="rounded-circle align-self-center mr-3" style="width:40px;height:40px;"
+           src="{{match.equipe1.logoUrl}}" onerror="this.src='../../../assets/img/profile_img_alt.jpg';">
+      <span class="align-self-center">{{match.equipe1.name}}</span>
     </div>
     <div class="col">
       <div class="align-self-center"><h3 > {{match.heure}} </h3></div>
@@ -10,7 +13,10 @@
       <p class="card-text"></p>
     </div>
     <div class="col">
-      <app-sm-team-details [teamId]="match.idEquipe2"></app-sm-team-details>
+     <!-- <app-sm-team-details [team]="match.equipe2"></app-sm-team-details> -->
+      <img class="rounded-circle align-self-center mr-3" style="width:40px;height:40px;"
+           src="{{match.equipe2.logoUrl}}" onerror="this.src='../../../assets/img/profile_img_alt.jpg';">
+      <span class="align-self-center">{{match.equipe2.name}}</span>
     </div>
   </div>
 

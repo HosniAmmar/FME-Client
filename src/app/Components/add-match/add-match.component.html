@@ -5,20 +5,20 @@
       <img id="teamAImg" class="mr-3 align-self-center rounded-circle" style="width:50%;height:60%;" src="../../../assets/img/ftmf.png" onerror="this.src='../../../assets/img/ftmf.png';" alt="image not found">
 
       <h1 class="display-4"> Equipe A</h1>
-      <select class="custom-select custom-select-lg mb-3" #teamAs (change)="setTeamA(teamAs.value)">
+      <select class="custom-select custom-select-lg mb-3" #teamAs >
         <option selected>Equipe A</option>
 
-        <option  *ngFor="let team of teams" value="{{team.id}}">{{team.name}}</option>
+        <option  *ngFor="let team of teams" value="{{team}}" (click)="setTeamA(team)">{{team.name}}</option>
 
       </select>
     </div>
     <div class="col-sm">
       <img id="teamBImg" class="mr-3 align-self-center rounded-circle" style="width:50%;height:60%;" src="../../../assets/img/ftmf.png" onerror="this.src='../../../assets/img/ftmf.png';" alt="image not found">
       <h1 class="display-4"> Equipe B</h1>
-      <select class="custom-select custom-select-lg mb-3" #teamBs (change)="setTeamB(teamBs.value)" >
+      <select class="custom-select custom-select-lg mb-3" #teamBs >
         <option selected>Equipe B</option>
 
-    <option *ngFor="let team of teams" value="{{team.id}}" >{{team.name}}</option>
+    <option *ngFor="let team of teams" value="{{team}}" (click)="setTeamB(team)" >{{team.name}}</option>
 
       </select>
     </div>

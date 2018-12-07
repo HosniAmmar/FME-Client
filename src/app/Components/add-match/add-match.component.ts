@@ -5,7 +5,7 @@ import {Alert} from 'selenium-webdriver';
 import {RefereeService} from '../../Services/referee.service';
 import {Referee} from '../../Models/Referee';
 import {MatchService} from '../../Services/match.service';
-import {Match} from '../../Models/Match';
+import {Match} from '../../models/Match';
 
 @Component({
   selector: 'app-add-match',
@@ -14,6 +14,8 @@ import {Match} from '../../Models/Match';
 })
 export class AddMatchComponent implements OnInit {
   teams: Team[];
+  equipe1: Team;
+  equipe2: Team;
   referees: Referee[];
   imgA: HTMLImageElement;
   imgB: HTMLImageElement;
@@ -24,23 +26,28 @@ export class AddMatchComponent implements OnInit {
     this.getTeams();
     this.getReferees();
   }
-  setTeamA(teamid: String) {
+  setTeamA(team: Team) {
+    this.equipe1 = team;
+    /*
     this.teams.forEach(function (value) {
       if ( value.id === Number(teamid)) {
         this.imgA = <HTMLImageElement> document.getElementById('teamAImg');
         this.imgA.src = value.logoUrl;
       }
     });
+    */
   }
-  setTeamB(teamid: String) {
+  setTeamB(team: Team) {
+    this.equipe2 = team;
+    /*
+        this.teams.forEach(function (value) {
+          if ( value.id === Number(teamid)) {
+            this.imgB = <HTMLImageElement> document.getElementById('teamBImg');
+            this.imgB.src = value.logoUrl;
 
-    this.teams.forEach(function (value) {
-      if ( value.id === Number(teamid)) {
-        this.imgB = <HTMLImageElement> document.getElementById('teamBImg');
-        this.imgB.src = value.logoUrl;
-
-      }
-    });
+          }
+        });
+        */
   }
 
 
@@ -51,8 +58,8 @@ export class AddMatchComponent implements OnInit {
     this.refereeService.getReferees().subscribe(data => {this.referees = data; } );
   }
   add( id: number,
-       idEquipe1: number,
-       idEquipe2: number,
+       equipe1: Team,
+       equipe2: Team,
        date: string,
        heure: string,
        idArbitre1: number,
@@ -60,10 +67,13 @@ export class AddMatchComponent implements OnInit {
        idArbitre3: number,
        idCommissaire: number,
        place: string): void {
-   this.matchService.addMatch({
+    equipe1 = this.equipe1;
+    equipe2 = this.equipe2;
+
+    this.matchService.addMatch({
   id,
-      idEquipe1,
-  idEquipe2,
+      equipe1,
+  equipe2,
     date,
     heure,
     place,

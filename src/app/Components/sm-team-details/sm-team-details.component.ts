@@ -8,17 +8,13 @@ import {TeamService} from '../../Services/team.service';
   styleUrls: ['./sm-team-details.component.css']
 })
 export class SmTeamDetailsComponent implements OnInit {
-  @Input() teamId: number;
-  team: Team;
+  @Input() team: Team;
+
   constructor(private teamService: TeamService) { }
 
   ngOnInit() {
-    this.getTeamById();
-  }
-  getTeamById() {
-    this.teamService.getTeam(this.teamId).subscribe(data => {
-      this.team = data;
-    });
   }
 
-}
+  }
+
+
