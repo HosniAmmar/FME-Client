@@ -12,11 +12,11 @@ import { AddResponsableComponent } from './Components/add-responsable/add-respon
 import {AddRefereeComponent} from './Components/add-referee/add-referee.component';
 import { ListResponsableComponent } from './Components/list-responsable/list-responsable.component';
 import { HeaderComponent } from './header/header.component';
+import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 import { UpdateResponsableComponent } from './Components/update-responsable/update-responsable.component';
 import { DeleteResponsableComponent } from './Components/delete-responsable/delete-responsable.component';
 import { ListTeamComponent } from './Components/list-team/list-team.component';
 import { PlayerDetailsComponent } from './Components/player-details/player-details.component';
-import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 import { PlayerUpdateComponent } from './Components/player-update/player-update.component';
 import { AddTeamComponent } from './Components/add-team/add-team.component';
 import {NgxPaginationModule} from 'ngx-pagination';
@@ -26,6 +26,10 @@ import { SmTeamDetailsComponent } from './Components/sm-team-details/sm-team-det
 import { MatchListComponent } from './Components/match-list/match-list.component';
 import { MatchDetailsComponent } from './Components/match-details/match-details.component';
 import { DeleteMatchComponent } from './Components/delete-match/delete-match.component';
+import { AddCommissarComponent} from './Components/add-commissar/add-commissar.component';
+import { ListCommissaireComponent } from './Components/list-commissaire/list-commissaire.component';
+import { DetailCommissarComponent } from './Components/detail-commissar/detail-commissar.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +42,6 @@ import { DeleteMatchComponent } from './Components/delete-match/delete-match.com
     HeaderComponent,
     DetailResponsableComponent,
     UpdateResponsableComponent,
-    DeleteResponsableComponent,
     ListTeamComponent,
     PlayerDetailsComponent,
     PlayerUpdateComponent,
@@ -49,7 +52,10 @@ import { DeleteMatchComponent } from './Components/delete-match/delete-match.com
     MatchListComponent,
     MatchDetailsComponent,
     DeleteMatchComponent,
-
+    DeleteResponsableComponent,
+    AddCommissarComponent,
+    ListCommissaireComponent,
+    DetailCommissarComponent,
 
   ],
   imports: [

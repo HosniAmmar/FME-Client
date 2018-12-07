@@ -54,13 +54,29 @@
 </div>
 
 </div>
+
 <div id="overlay">
 <div id="overlayinside">
   <h2><a (click)="off();" >
     <i class="far fa-times-circle" ></i>
   </a></h2>
-  <app-match-list [matchList]="selectedMatchList"></app-match-list>
+
+  <app-match-list  [matchList]="selectedMatchList"></app-match-list>
 </div>
 </div>
+
+  <div id="overlayAdd">
+    <div id="overlayinsideAdd">
+      <h2><a (click)="offAddMatch();" >
+        <i class="far fa-times-circle" ></i>
+      </a></h2>
+
+      <app-add-match></app-add-match>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+<button class="btn btn-danger" (click)="onAddMatch()"> Ajouter Match</button>
+
 </div>
 

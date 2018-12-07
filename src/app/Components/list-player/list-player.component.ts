@@ -22,7 +22,10 @@ export class ListPlayerComponent implements OnInit {
   teamId: number;
   selectedPlayer: Player;
   selectedPlayerForUpdate: Player;
-  constructor(private route: ActivatedRoute, private playerService: PlayerService, private teamService: TeamService) { }
+
+  constructor(private route: ActivatedRoute,
+              private playerService: PlayerService,
+              private teamService: TeamService) { }
   search(term: string ): void {
     if (term !== '') {
       this.showAll = false;
@@ -102,7 +105,6 @@ export class ListPlayerComponent implements OnInit {
   }
   showPlayerUpdate(player: Player): void {
     this.selectedPlayerForUpdate = player;
-    alert('this.selectedPlayerForUpdate ' + this.selectedPlayerForUpdate.firstName);
     document.getElementById('overlayUpdate').style.display = 'block';
   }
 

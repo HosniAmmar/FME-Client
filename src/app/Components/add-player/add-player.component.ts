@@ -13,6 +13,7 @@ export class AddPlayerComponent implements OnInit {
   img: HTMLImageElement;
   constructor(private playerService: PlayerService) {
   }
+
   add(
     id: number,
     licenseNumber: string,
