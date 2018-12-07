@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Responsable} from "../../Models/Responsable";
 import {ActivatedRoute} from "@angular/router";
 import {ResponsableService} from "../../Services/responsable.service";
+
 import {Observable} from "rxjs";
 
 @Component({
@@ -12,7 +13,7 @@ import {Observable} from "rxjs";
 export class ListResponsableComponent implements OnInit {
 
   responsables: Responsable [];
-  selectedResponsable:Responsable;
+  selectedResponsable: Responsable;
   idx = '0';
   constructor(private route: ActivatedRoute, private responsableService: ResponsableService) { }
 

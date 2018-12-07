@@ -10,7 +10,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TeamService {
-  teamUrl = '//localhost:8080/team';
+  teamUrl = '//localhost:8083/team';
   constructor(private http: HttpClient) { }
 
   getTeams(): Observable<Team[]> {

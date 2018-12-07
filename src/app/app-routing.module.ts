@@ -11,17 +11,25 @@ import {ListResponsableComponent} from './Components/list-responsable/list-respo
 import {ListTeamComponent} from './Components/list-team/list-team.component';
 import {PlayerDetailsComponent} from './Components/player-details/player-details.component';
 import {AddRefereeComponent} from './Components/add-referee/add-referee.component';
+import {AddTeamComponent} from './Components/add-team/add-team.component';
+import {AddMatchComponent} from './Components/add-match/add-match.component';
+import {MatchCalendarComponent} from './Components/match-calendar/match-calendar.component';
 
 const routes: Routes = [
 
   { path: 'referee/add', component: AddRefereeComponent},
   { path: 'player/add', component: AddPlayerComponent},
+  { path: 'team/add', component: AddTeamComponent},
+
   { path: 'players', component: ListPlayerComponent},
   { path: 'team', component: ListTeamComponent},
 
   {path: 'responsable/add', component: AddResponsableComponent},
   {path: 'responsable/:id' , component: ListResponsableComponent},
-  {path: 'details/:id' , component: PlayerDetailsComponent}
+  {path: 'details/:id' , component: PlayerDetailsComponent},
+  {path: 'match/add', component: AddMatchComponent},
+  {path: 'calendar', component: MatchCalendarComponent}
+
 
 ];
 

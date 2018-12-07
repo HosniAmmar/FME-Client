@@ -1,0 +1,110 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <img id="teamAImg" class="mr-3 align-self-center rounded-circle" style="width:50%;height:60%;" src="../../../assets/img/ftmf.png" onerror="this.src='../../../assets/img/ftmf.png';" alt="image not found">
+
+      <h1 class="display-4"> Equipe A</h1>
+      <select class="custom-select custom-select-lg mb-3" #teamAs (change)="setTeamA(teamAs.value)">
+        <option selected>Equipe A</option>
+
+        <option  *ngFor="let team of teams" value="{{team.id}}">{{team.name}}</option>
+
+      </select>
+    </div>
+    <div class="col-sm">
+      <img id="teamBImg" class="mr-3 align-self-center rounded-circle" style="width:50%;height:60%;" src="../../../assets/img/ftmf.png" onerror="this.src='../../../assets/img/ftmf.png';" alt="image not found">
+      <h1 class="display-4"> Equipe B</h1>
+      <select class="custom-select custom-select-lg mb-3" #teamBs (change)="setTeamB(teamBs.value)" >
+        <option selected>Equipe B</option>
+
+    <option *ngFor="let team of teams" value="{{team.id}}" >{{team.name}}</option>
+
+      </select>
+    </div>
+  </div>
+  <div class="dropdown-divider"></div>
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Date :</label>
+        <input type="date" class="form-control" #dateMatch />
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Heure :</label>
+        <input type="time" class="form-control" #heureMatch />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Arbitre 1 :</label>
+        <select class="custom-select custom-select-lg mb-3" #ref1>
+        <option selected>Arbitre 1</option>
+
+        <option *ngFor="let referee of referees" value="{{referee.id}}" >{{referee.firstName}}</option>
+
+        </select>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Arbitre 2 :</label>
+        <select class="custom-select custom-select-lg mb-3" #ref2>
+          <option selected>Arbitre 2</option>
+
+          <option *ngFor="let referee of referees" value="{{referee.id}}" >{{referee.firstName}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Arbitre 3 :</label>
+        <select class="custom-select custom-select-lg mb-3" #ref3>
+          <option selected>Arbitre 3</option>
+
+          <option *ngFor="let referee of referees" value="{{referee.id}}" >{{referee.firstName}}</option>
+
+        </select>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label>Commissaire :</label>
+        <input class="form-control" #comissaire />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+    <div class="form-group">
+    <label>Lieu :</label>
+
+    <input class="form-control" #place />
+    </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm"></div>
+    <div class="col-sm"></div>
+    <div class="col-sm"><button class="btn btn-danger btn-block btn-lg" (click)="add(
+    0,
+    teamAs.value,
+    teamBs.value,
+    dateMatch.value,
+    heureMatch.value,
+    ref1.value,
+    ref2.value,
+    ref3.value,
+    comissaire.value,
+    place.value
+)">Enregistrer</button></div>
+  </div>
+  </div>
