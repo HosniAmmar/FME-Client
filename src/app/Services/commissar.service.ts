@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Responsable} from '../Models/Responsable';
-import {Observable} from 'rxjs';
-import {Commissar} from '../Models/Commissar';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Responsable} from "../Models/Responsable";
+import {Observable} from "rxjs";
+import {Commissar} from "../Models/Commissar";
+
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -12,6 +13,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class CommissarService {
+
+
   private  commissarUrl = 'http://localhost:8083/commissioner';
 
   constructor(private http: HttpClient) { }
@@ -29,6 +32,7 @@ export class CommissarService {
     const url = `${this.commissarUrl}/${id}`;
     return this.http.get<Commissar>(url);
   }
+
 
 
   updateCommissar(id: number, commissar: Commissar): Observable<any> {

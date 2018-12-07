@@ -10,6 +10,7 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class PlayerService {
+
   playersUrl = '//localhost:8083/player';
 
   constructor(private http: HttpClient) { }

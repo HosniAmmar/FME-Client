@@ -7,7 +7,8 @@ export class Player extends Personne {
   actualTeamId: number;
   previousTeamId: number;
   category: string;
-
+  photoUrl: string;
+  
   constructor(firstName: string, lastName: string,
               phone: string, natIdNum: string,
               address: string, mailAddress: string,

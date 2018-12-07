@@ -1,0 +1,30 @@
+<div *ngIf="teamIn" class="container" id="overlayDelete">
+  <div class="row">
+    <div class="col-3">
+
+    </div>
+    <div class="col-5" style="text-align: center">
+      <img  src="../../../assets/img/warnin.png"  style="width:70px;height:65px;">
+    </div>  </div>
+
+
+  <div class="row" style="margin-top: 3%">
+    <div class="col-12" style="text-align: center">
+      <p style="color: black;font-size: medium" class="font-weight-bold">Voulez vous vraiment supprimer {{teamIn.name}}  ?</p>
+    </div> </div>
+
+  <div class="row" style="margin-top: 1%">
+    <div class="col-4">
+
+    </div>
+
+    <div class="col-8">
+      <button type="button" (click)="delete();close()" class="btn btn-danger">Supprimer</button> &nbsp;
+      <button type="button" (click)="close();" class="btn btn-danger">Annuler</button>
+
+    </div>
+
+
+  </div>
+
+</div>

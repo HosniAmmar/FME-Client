@@ -32,8 +32,7 @@ export class ListPlayerComponent implements OnInit {
     }
     this.searchTerms.next(term);
     document.getElementById('searchdropdown').style.display = 'block';
-
-
+    
   }
   ngOnInit() {
     this.showAll = true;

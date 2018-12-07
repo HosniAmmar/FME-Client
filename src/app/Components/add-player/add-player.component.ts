@@ -75,4 +75,6 @@ export class AddPlayerComponent implements OnInit {
     this.img.src = url;
   }
 
+
+
 }

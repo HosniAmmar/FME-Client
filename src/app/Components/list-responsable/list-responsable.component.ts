@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Responsable} from "../../Models/Responsable";
-import {ActivatedRoute} from "@angular/router";
-import {ResponsableService} from "../../Services/responsable.service";
+import {Responsable} from '../../Models/Responsable';
+import {ActivatedRoute} from '@angular/router';
+import {ResponsableService} from '../../Services/responsable.service';
 
 import {Observable} from "rxjs";
 
@@ -32,7 +32,7 @@ export class ListResponsableComponent implements OnInit {
   //interface delete responsable
   delete(id: number): void {
     this.responsableService.getResponsable(id).subscribe(value => {
-      this.selectedResponsable=value;
+      this.selectedResponsable =value;
     });
     document.getElementById('overlayDelete').style.display = 'block';
 
@@ -61,9 +61,6 @@ export class ListResponsableComponent implements OnInit {
       this.selectedResponsable=value;
     });
     document.getElementById('overlay2').style.display = 'block';
-    alert('clicked affiche ' + id);
-
-
   }
 
   ofF() :void {

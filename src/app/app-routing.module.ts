@@ -14,16 +14,17 @@ import {ListCommissaireComponent} from './Components/list-commissaire/list-commi
 
 const routes: Routes = [
 
+
+  { path: 'player/add', component: AddPlayerComponent},
+  { path: 'players', component: ListPlayerComponent},
+  {path: 'responsable/add', component: AddResponsableComponent},
+  {path: 'responsables' , component: ListResponsableComponent},
+  {path: 'team' , component: ListTeamComponent},
+  {path: 'commissars' , component: ListCommissaireComponent},
+
   { path: 'referee/add', component: AddRefereeComponent},
   { path: 'team/add', component: AddTeamComponent},
 
-  { path: 'players', component: ListPlayerComponent},
-  { path: 'team', component: ListTeamComponent},
-  {path: 'commissars' , component: ListCommissaireComponent},
-
-  {path: 'responsable/add', component: AddResponsableComponent},
-  {path: 'responsable/:id' , component: ListResponsableComponent},
-  {path: 'details/:id' , component: PlayerDetailsComponent},
   {path: 'match/add', component: AddMatchComponent},
   {path: '', component: MatchCalendarComponent}
 
