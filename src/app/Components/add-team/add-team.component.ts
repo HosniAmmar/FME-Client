@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import {TeamService} from '../../Services/team.service';
 import {Responsable} from '../../Models/Responsable';
 import {Team} from '../../Models/Team';
+
 
 @Component({
   selector: 'app-add-team',
@@ -9,13 +11,19 @@ import {Team} from '../../Models/Team';
   styleUrls: ['./add-team.component.css']
 })
 export class AddTeamComponent implements OnInit {
+
   team: Team;
   teams: Team[] = [];
 
   constructor(private teamService: TeamService) { }
 
+
+  constructor() { }
+
+
   ngOnInit() {
   }
+
 
   add(
     id: Number,

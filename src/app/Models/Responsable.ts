@@ -7,7 +7,6 @@ export class Responsable {
   birthdate: string;
   phone: string;
   mailAdress: string;
-
   fonction:string;
   nationality: string;
   photoUrl: string;

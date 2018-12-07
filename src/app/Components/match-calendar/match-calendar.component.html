@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col">
+<div class="row">
+  <div class="col">
+    <h1></h1>
+
+    <div class="month">
+      <ul>
+        <li class="prev" (click)="previousMonth();"   >&#10094;</li>
+        <li class="next" (click)="nextMonth();" >&#10095;</li>
+        <li>
+          {{month}}
+          <br>
+          <span style="font-size:18px">{{yyyy}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="weekdays">
+      <li><div class="row"><div class="col">Lun</div><div class="col"></div></div></li>
+      <li><div class="row"><div class="col">Mar</div><div class="col"></div></div></li>
+      <li><div class="row"><div class="col">Mer</div><div class="col"></div></div></li>
+      <li><div class="row"><div class="col">Jeu</div><div class="col"></div></div></li>
+      <li><div class="row"><div class="col">Ven</div><div class="col"></div></div></li>
+      <li><div class="row"><div class="col">Sam</div><div class="col"></div></div></li>
+      <li><div class="row"><div class="col">Dim</div><div class="col"></div></div></li>
+    </ul>
+
+    <ul class="days" >
+      <li *ngFor="let empty of emptySlots" >{{empty}}</li>
+      <li class="day" *ngFor="let journee of monthTab" >
+        <div class="row">
+        <div class="col" *ngIf="journee.date===dd && journee.month === mm && journee.year === year ; else elseBlock">
+          <span class="active">{{journee.date}}</span>
+        </div>
+
+        <ng-template #elseBlock>
+          <div class="col">
+          {{journee.date}}
+          </div>
+         </ng-template>
+          <div class="col">
+            <span (click)="on(journee.matchList);"  *ngIf="journee.matchListLength > 0" class="badge badge-secondary">
+            {{journee.matchListLength}} Match</span>
+          </div>
+        </div>
+      </li>
+
+    <!--  <li><span class="active">10</span></li> -->
+
+    </ul>
+
+  </div>
+</div>
+
+</div>
+
+<div id="overlay">
+<div id="overlayinside">
+  <h2><a (click)="off();" >
+    <i class="far fa-times-circle" ></i>
+  </a></h2>
+
+  <app-match-list  [matchList]="selectedMatchList"></app-match-list>
+</div>
+</div>
+
+  <div id="overlayAdd">
+    <div id="overlayinsideAdd">
+      <h2><a (click)="offAddMatch();" >
+        <i class="far fa-times-circle" ></i>
+      </a></h2>
+
+      <app-add-match></app-add-match>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+<button class="btn btn-danger" (click)="onAddMatch()"> Ajouter Match</button>
+
+</div>
+

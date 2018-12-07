@@ -1,0 +1,44 @@
+<div *ngIf="match" class="container">
+  <div class="row">
+    <div class="col-3">
+
+    </div>
+    <div class="col-5" style="text-align: center">
+      <img  src="../../../assets/img/warnin.png"  style="width:70px;height:65px;">
+    </div>  </div>
+
+
+  <div class="row" style="margin-top: 3%">
+    <div class="col-12" style="text-align: center">
+
+      <h3>Voulez vous vraiment supprimer le match </h3>
+      <div class="row justify-content-center">
+        <div class="col-2"><app-sm-team-details [team]="match.equipe1"></app-sm-team-details></div>
+        <div class="col-1">Vs</div>
+        <div class="col-2"><app-sm-team-details [team]="match.equipe2"></app-sm-team-details></div>
+
+      </div>
+    </div>
+  </div>
+<br>
+  <div class="row justify-content-center">
+
+
+
+      <div class="col-3">
+        <div class="row justify-content-center">
+          <button type="button" (click)="delete();close()" class="btn btn-danger">Supprimer</button> &nbsp;
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="row justify-content-center">
+        <button type="button" (click)="close();" class="btn btn-danger">Annuler</button>
+        </div>
+      </div>
+
+
+
+
+  </div>
+
+</div>

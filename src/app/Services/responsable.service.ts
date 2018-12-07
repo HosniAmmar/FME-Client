@@ -1,12 +1,8 @@
 import { Injectable } from '@angular/core';
-import {Responsable} from "../Models/Responsable";
+import {Responsable} from '../Models/Responsable';
 import { Observable, of } from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-// @ts-ignore
-import { catchError, map, tap } from 'rxjs/operators';
 
-import {any} from 'codelyzer/util/function';
-import {Player} from "../Models/Player";
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -14,7 +10,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ResponsableService {
-  private  responsableUrl = 'http://localhost:8082/responsable';
+
+  private  responsableUrl = 'http://localhost:8083/responsable';
 
   constructor(private http: HttpClient) { }
 
@@ -39,8 +36,7 @@ export class ResponsableService {
     return this.http.get<Responsable>(url);
   }
 
-
-  updateResponsable(id:number,responsable: Responsable): Observable<any> {
+  updateResponsable(id: number, responsable: Responsable): Observable<any> {
     const url = `${this.responsableUrl}/${id}`;
     return this.http.put<Responsable>(url, responsable, httpOptions);
   }

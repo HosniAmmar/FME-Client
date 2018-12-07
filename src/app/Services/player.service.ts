@@ -3,14 +3,15 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Player} from '../Models/Player';
 import { Observable, of } from 'rxjs';
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
 @Injectable({
   providedIn: 'root'
 })
 export class PlayerService {
-  playersUrl = '//localhost:8082/player';
+
+  playersUrl = '//localhost:8083/player';
 
   constructor(private http: HttpClient) { }
 
@@ -34,7 +35,8 @@ export class PlayerService {
     this.http.delete<Player>(url, httpOptions).subscribe();
   }
   updatePlayer(player: Player): Observable<any> {
-     return this.http.put<Player>(this.playersUrl, player, httpOptions);
+    const url = `${this.playersUrl}/${player.id}`;
+    return this.http.put<Player>(url, player, httpOptions);
 
   }
 }

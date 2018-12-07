@@ -25,7 +25,7 @@ referees: Referee[];
   phone: string,
   mailAdress: string,
   photoUrl: string,
-  badge: string): void {
+  badge: string): void {/*
     this.refereeService.addReferee({
       id,
       firstName,
@@ -40,7 +40,9 @@ referees: Referee[];
       phone,
       mailAdress,
       photoUrl,
-      badge} as Referee).subscribe(referee => { this.referees.push(referee); }); }
+      badge} as Referee).subscribe(referee => { this.referees.push(referee); });
+       */
+       }
 
   getReferees(): void {
     this.refereeService.getReferees()

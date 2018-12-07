@@ -16,16 +16,25 @@ import { HeaderComponent } from './header/header.component';
 import { DetailResponsableComponent } from './Components/detail-responsable/detail-responsable.component';
 import { UpdateResponsableComponent } from './Components/update-responsable/update-responsable.component';
 import { DeleteResponsableComponent } from './Components/delete-responsable/delete-responsable.component';
-import {PlayerUpdateComponent} from './Components/player-update/player-update.component';
-import {PlayerDetailsComponent} from './Components/player-details/player-details.component';
-import {AddTeamComponent} from './Components/add-team/add-team.component';
 import {ListTeamComponent} from './Components/list-team/list-team.component';
 import {UpdateTeamComponent} from './Components/update-team/update-team.component';
 import {DetailTeamComponent} from './Components/detail-team/detail-team.component';
 import {DeleteTeamComponent} from './Components/delete-team/delete-team.component';
 import {ListCommissaireComponent} from './Components/list-commissaire/list-commissaire.component';
-import {AddCommissarComponent} from './Components/add-commissar/add-commissar.component';
-import {DetailCommissarComponent} from './Components/detail-commissar/detail-commissar.component';
+
+import { PlayerDetailsComponent } from './Components/player-details/player-details.component';
+import { PlayerUpdateComponent } from './Components/player-update/player-update.component';
+import { AddTeamComponent } from './Components/add-team/add-team.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { AddMatchComponent } from './Components/add-match/add-match.component';
+import { MatchCalendarComponent } from './Components/match-calendar/match-calendar.component';
+import { SmTeamDetailsComponent } from './Components/sm-team-details/sm-team-details.component';
+import { MatchListComponent } from './Components/match-list/match-list.component';
+import { MatchDetailsComponent } from './Components/match-details/match-details.component';
+import { DeleteMatchComponent } from './Components/delete-match/delete-match.component';
+import { AddCommissarComponent} from './Components/add-commissar/add-commissar.component';
+import { ListCommissaireComponent } from './Components/list-commissaire/list-commissaire.component';
+import { DetailCommissarComponent } from './Components/detail-commissar/detail-commissar.component';
 
 @NgModule({
   declarations: [
@@ -39,15 +48,26 @@ import {DetailCommissarComponent} from './Components/detail-commissar/detail-com
     HeaderComponent,
     DetailResponsableComponent,
     UpdateResponsableComponent,
-    DeleteResponsableComponent,
-    AddTeamComponent,
-    ListTeamComponent,
     UpdateTeamComponent,
     DetailTeamComponent,
     DeleteTeamComponent,
     ListCommissaireComponent,
+
+    ListTeamComponent,
+    PlayerDetailsComponent,
+    PlayerUpdateComponent,
+    AddTeamComponent,
+    AddMatchComponent,
+    MatchCalendarComponent,
+    SmTeamDetailsComponent,
+    MatchListComponent,
+    MatchDetailsComponent,
+    DeleteMatchComponent,
+    DeleteResponsableComponent,
     AddCommissarComponent,
+    ListCommissaireComponent,
     DetailCommissarComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -55,7 +75,8 @@ import {DetailCommissarComponent} from './Components/detail-commissar/detail-com
     HttpClientModule,
     AppRoutingModule,
     MaterielModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
