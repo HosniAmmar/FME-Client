@@ -17,4 +17,8 @@ export class MatchService {
   getMatchs(): Observable<Match[]> {
     return this.http.get<Match[]>(this.matchsUrl);
   }
+  getMatchByDate(date: string): Observable<Match[]> {
+    const url = `${this.matchsUrl}/date?date=${date}`;
+    return this.http.get<Match[]>(url);
+  }
 }

@@ -1,0 +1,41 @@
+<div class="table-responsive-lg">
+
+<table class="table">
+
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">TeamA</th>
+
+    <th scope="col"></th>
+
+    <th scope="col">TeamB</th>
+    <th scope="col">Heure</th>
+    <th scope="col"></th>
+    <th scope="col"></th>
+    <th scope="col"><button class="btn btn-danger "> <i class="fas fa-plus"></i> Ajouter </button></th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let match of matchList" >
+    <td>{{match.id}}</td>
+    <td><app-sm-team-details [teamId]="match.idEquipe1" ></app-sm-team-details></td>
+    <td>VS</td>
+    <td><app-sm-team-details [teamId]="match.idEquipe2" ></app-sm-team-details></td>
+    <td>{{match.heure}}</td>
+    <td><button class="btn btn-secondary" (click)="onDetails(match)"><i class="far fa-address-card"></i></button></td>
+    <td><button class="btn btn-secondary"><i class="fas fa-pen"></i></button></td>
+    <td><button class="btn btn-danger"> <i class="fas fa-trash-alt"></i></button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div id="overlayDetails">
+  <div id="overlayinsideDetails">
+   <h2> <a (click)="offDetails();" >
+      <i class="far fa-times-circle" ></i>
+    </a></h2>
+    <app-match-details [match]="selectedMatch"></app-match-details>
+  </div>
+</div>
