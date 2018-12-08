@@ -5,7 +5,7 @@ import {Alert} from 'selenium-webdriver';
 import {RefereeService} from '../../Services/referee.service';
 import {Referee} from '../../Models/Referee';
 import {MatchService} from '../../Services/match.service';
-import {Match} from '../../models/Match';
+import{Match} from '../../Models/Match';
 
 @Component({
   selector: 'app-add-match',

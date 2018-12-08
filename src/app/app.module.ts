@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MaterielModule} from './MaterielModule';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +30,12 @@ import { AddCommissarComponent} from './Components/add-commissar/add-commissar.c
 import { ListCommissaireComponent } from './Components/list-commissaire/list-commissaire.component';
 import { DetailCommissarComponent } from './Components/detail-commissar/detail-commissar.component';
 
+import { DetailTeamComponent } from './Components/detail-team/detail-team.component';
+
+import { UpdateTeamComponent } from './Components/update-team/update-team.component';
+
+import { DeleteTeamComponent } from './Components/delete-team/delete-team.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +62,9 @@ import { DetailCommissarComponent } from './Components/detail-commissar/detail-c
     AddCommissarComponent,
     ListCommissaireComponent,
     DetailCommissarComponent,
+    DetailTeamComponent,
+    UpdateTeamComponent,
+    DeleteTeamComponent
 
   ],
   imports: [
@@ -67,6 +76,7 @@ import { DetailCommissarComponent } from './Components/detail-commissar/detail-c
     BrowserAnimationsModule,
     NgxPaginationModule
   ],
+    schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,151 +1,159 @@
+<div id="overlay">
+  <h3  style="color:black" class="display-5">Informations Personelles</h3>
+  <hr> <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img id="profileImg" src="../../../assets/img/placeholder.png" class="mr-3 align-self-center rounded-circle" style="width:150px;height:150px;" >
 
-<h1 class="display-4">Informations Personelles</h1>
-<div class="container">
-  <div class="formPersonne">
-  <div class="row">
-    <div class="col-sm-4">
-      <img id="profileImg" class="mr-3 align-self-center rounded-circle" style="width:80%;height:80%;" src="../../../assets/img/profile_img_alt.jpg" onerror="this.src='../../../assets/img/profile_img_alt.jpg';" alt="image not found">
-      <div class="form-group">
-        <label>UrlImage</label>
-        <input class="form-control" />
+        <div class="form-group">
+          <label>ImageURL</label>
+          <input id="ImageURLTeam" class="form-control" #logoUrl />
+        </div>
+
+
+
+        <div class="form-group">
+          <label>Nom de l'equipe</label>
+          <input  id="NomTeam" class="form-control" #name />
+        </div>
+
+        <div class="form-group">
+          <label>Division</label>
+          <input id="DivTeam" #division class="form-control"  />
+        </div>
+
+
+
       </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Nom du président*</label>
+          <input id="NomPresTeam" class="form-control" #presidentLastName />
+        </div>
 
+        <div class="form-group">
+          <label>N° du téléphone du président</label>
+          <input id="TelPresTeam" class="form-control" #presidentPhone />
+        </div>
+
+        <div class="form-group">
+          <label>Adresse</label>
+          <input id="AdresseTeam" class="form-control" #address />
+        </div>
+
+        <div class="form-group">
+          <label>Date de création</label>
+          <input id="DateCreTeam" class="form-control" #creationDate />
+        </div>
+
+
+        <div class="form-group">
+          <label>N° de téléphone</label>
+          <input id="TelTeam" class="form-control" #phone />
+        </div>
+
+        <div class="form-group">
+          <label>Terrain principale</label>
+          <input id="TerrainPrTeam" class="form-control" #mainStadium />
+        </div>
+
+        <div class="form-group">
+          <label>Nom du secrétaire:</label>
+          <input id="NomSecreTeam" class="form-control" #secretaryLastName />
+        </div>
+
+        <div class="form-group">
+          <label>N° de téléphone du secrétaire</label>
+          <input id="TelSecTeam" class="form-control" #secretaryPhone />
+        </div>
+
+
+
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Prénom président</label>
+          <input id="PrenomPresTeam" class="form-control" #presidentFirstName />
+        </div>
+
+        <div class="form-group">
+          <label>Région</label>
+          <input id="RegionTeam" class="form-control" #region />
+        </div>
+
+
+
+        <div class="form-group">
+          <label>Email</label>
+          <input id="EmailTeam" #mail class="form-control"  />
+        </div>
+
+
+        <div class="form-group">
+          <label>N° de fax</label>
+          <input id="FaxTeam" class="form-control" #fax />
+        </div>
+
+        <div class="form-group">
+          <label>Adresse du terrain</label>
+          <input id="AdresseTerTeam" class="form-control" #mainStadiumLocation />
+        </div>
+
+        <div class="form-group">
+          <label>Prénom secrétaire</label>
+          <input id="PrenomSecreTeam" class="form-control" #secretaryFirstName />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <br>
+  <div class="container">
+
+    <div class="form-group">
+      <label>Commentaire</label>
+      <textarea id="CommTeam" #teamPhoto class="form-control" rows="5"  ></textarea>
     </div>
 
-    <div class="col-sm">
-
+    <div class="container">
       <div class="row">
-
         <div class="col-sm">
-          <div class="form-group">
-            <label>Nom de l'équipe</label>
-            <input class="form-control" #presName />
-          </div>
-          <div class="form-group">
-            <label>Date de création</label>
-            <input class="form-control" #presName />
-          </div>
-          <div class="form-group">
-            <label>Division</label>
-            <input class="form-control" #presName />
-          </div>
-          <div class="form-group">
-            <label>E-Mail</label>
-            <input class="form-control" #presName />
-          </div>
-          <div class="form-group">
-            <label>N° de Téléphone </label>
-            <input class="form-control" #presName />
-          </div>
         </div>
         <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <button class="btn btn-danger" (click)="add(
+          0,
+          name.value,
+          logoUrl.value,
+          address.value,
+          region.value,
+          creationDate.value,
+          presidentFirstName.value,
+          presidentLastName.value,
+          presidentPhone.value,
+          secretaryFirstName.value,
+          secretaryLastName.value,
+          secretaryPhone.value,
+          mail.value,
+          phone.value,
+          fax.value,
+          mainStadium.value,
+          mainStadiumLocation.value,
+          teamPhoto.value,
+          division.value
+       )">enregistrer</button> &nbsp;
+          <button (click)="close()" class="btn btn-danger">Annuler</button>
 
-          <div class="form-group">
-            <label>Adresse</label>
-            <input class="form-control" #presName />
-          </div>
-          <div class="form-group">
-            <label>Region</label>
-            <input class="form-control" #presName />
-          </div>
-          <div class="form-group">
-            <label>Terrain principale</label>
-            <input class="form-control" #presName />
-          </div>
-          <div class="form-group">
-            <label>Adresse du Terrain principale</label>
-            <input class="form-control" #presName />
-          </div>
-          <div class="form-group">
-            <label>N° de Fax </label>
-            <input class="form-control" #presName />
-          </div>
         </div>
 
       </div>
-
-  </div>
-</div>
-  </div>
-<div class="formPersonne">
-  <div class="row">
-
-    <div class="col-sm">
-      <div class="form-group">
-        <label>Nom du président</label>
-        <input class="form-control" #presName />
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="form-group">
-        <label>Prénom du président</label>
-        <input class="form-control" #presLastName />
-      </div>
-
-
-    </div>
-    <div class="col-sm">
-      <div class="form-group">
-        <label>N° de Téléphone du président</label>
-        <input class="form-control" #presLastName />
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="row collapse multi-collapse" id="collapseExample">
-
-    <div class="col-sm">
-      B1X
-    </div>
-    <div class="col-sm">
-      B2XX
-    </div>
-    <div class="col-sm">
-      B2XX
-    </div>
-  </div>
-  <a class="btn btn-secondary mx-auto formPersonneBtn " style="width: 100%;" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-  +</a>
-
-<!--  -->
-</div>
-  <div class="row">
-
-  </div>
-
-<h1 class="display-4">Informations générale</h1>
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-    C
-    </div>
-    </div>
-</div>
-<div class="form-group">
-  <label>Commentaire</label>
-  <textarea class="form-control" rows="5"  ></textarea>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-    </div>
-    <div class="col-sm">
-    </div>
-    <div class="col-sm">
-      <button type="button" class="btn btn-secondary btn-block btn-lg">Annuler</button>
-    </div>
-    <div class="col-sm">
-      <button class="btn btn-primary btn-block btn-lg">
-        Enregistrer
-      </button>
     </div>
   </div>
 </div>
-
-
-
-
 

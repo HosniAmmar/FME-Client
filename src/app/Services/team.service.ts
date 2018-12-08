@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Team} from '../Models/Team';
 import {Observable, of} from 'rxjs';
+import {Player} from '../Models/Player';
+import {Team} from '../Models/Team';
+import {Responsable} from '../Models/Responsable';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -22,9 +24,27 @@ export class TeamService {
 
   searchTeams(term: string): Observable<Team[]> {
     if (!term.trim()) {
+      // if not search term, return empty hero array.
       return of([]);
     }
     const url = `${this.teamUrl}/name/?name=${term}`;
     return this.http.get<Team[]>(url);
   }
+
+
+  addTeam (team:Team): Observable<Team> {
+    return this.http.post<Team>(this.teamUrl, team, httpOptions);
+  }
+
+  updateTeam(id:number,team: Team): Observable<any> {
+    const url = `${this.teamUrl}/${id}`;
+    return this.http.put<Team>(url, team, httpOptions);
+  }
+
+  deleteTeam(id: number): void {
+    const url = `${this.teamUrl}/${id}`;
+    this.http.delete<Team>(url, httpOptions).subscribe();
+  }
+
+
 }
