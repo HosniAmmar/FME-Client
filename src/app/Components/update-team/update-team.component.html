@@ -1,0 +1,140 @@
+<div id="overlay"  *ngIf="teamIn">
+  <h3  style="color:black" class="display-5">Informations Personelles</h3>
+  <hr> <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img id="profileImg" src="{{teamIn.logoUrl}}" class="mr-3 align-self-center rounded-circle" style="width:150px;height:150px;" >
+
+        <div class="form-group">
+          <label>ImageURL</label>
+          <input id="UpdImageURLTeam" class="form-control"[(ngModel)]="teamIn.logoUrl" />
+        </div>
+
+
+
+        <div class="form-group">
+          <label>Nom de l'equipe</label>
+          <input id="UpdNomEquTeam" class="form-control" [(ngModel)]="teamIn.name"  />
+        </div>
+
+        <div class="form-group">
+          <label>Division</label>
+          <input  id="UpdDivisionTeam" class="form-control" [(ngModel)]="teamIn.division"  />
+        </div>
+
+
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Nom du président*</label>
+          <input id="UpdNomPresTeam" class="form-control" [(ngModel)]="teamIn.presidentLastName" />
+        </div>
+
+        <div class="form-group">
+          <label>N° du téléphone du président</label>
+          <input id="UpdNumTelPresTeam" class="form-control" [(ngModel)]="teamIn.presidentPhone" />
+        </div>
+
+        <div class="form-group">
+          <label>Adresse</label>
+          <input id="UpdAdresseTeam" class="form-control" [(ngModel)]="teamIn.address" />
+        </div>
+
+        <div class="form-group">
+          <label>Date de création</label>
+          <input id="UpdDateCreTeam" class="form-control" [(ngModel)]="teamIn.creationDate" />
+        </div>
+
+
+        <div class="form-group">
+          <label>N° de téléphone</label>
+          <input id="UpdNumTelTeam" class="form-control" [(ngModel)]="teamIn.phone" />
+        </div>
+
+        <div class="form-group">
+          <label>Terrain principale</label>
+          <input id="UpdTerrainPrTeam" class="form-control" [(ngModel)]="teamIn.mainStadium" />
+        </div>
+
+        <div class="form-group">
+          <label>Nom du secrétaire:</label>
+          <input id="UpdNomSecTeam" class="form-control" [(ngModel)]="teamIn.secretaryLastName" />
+        </div>
+
+        <div class="form-group">
+          <label>N° de téléphone du secrétaire</label>
+          <input id="UpdTelSecTeam" class="form-control" [(ngModel)]="teamIn.secretaryPhone" />
+        </div>
+
+
+
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Prénom président</label>
+          <input id="UpdPrenomPresTeam" class="form-control" [(ngModel)]="teamIn.presidentFirstName"/>
+        </div>
+
+
+        <div class="form-group">
+          <label>Région</label>
+          <input id="UpdRegionTeam" class="form-control" [(ngModel)]="teamIn.region" />
+        </div>
+
+
+
+        <div class="form-group">
+          <label>Email</label>
+          <input id="UpdEmailTeam" class="form-control"  [(ngModel)]="teamIn.mail" />
+        </div>
+
+
+        <div class="form-group">
+          <label>N° de fax</label>
+          <input id="UpdFaxTeam" class="form-control" [(ngModel)]="teamIn.fax" />
+        </div>
+
+        <div class="form-group">
+          <label>Adresse du terrain</label>
+          <input id="UpdAdresseTerrTeam" class="form-control" [(ngModel)]="teamIn.mainStadiumLocation" />
+        </div>
+
+        <div class="form-group">
+          <label>Prénom secrétaire</label>
+          <input id="UpdPrenomSecTeam" class="form-control" [(ngModel)]="teamIn.secretaryFirstName" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <br>
+  <div class="container">
+
+    <div class="form-group">
+      <label>Commentaire</label>
+      <textarea id="UpdCommTeam" #teamPhoto class="form-control" rows="5"  ></textarea>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <button id ="Updenreg" class="btn btn-danger" (click)="save()">enregistrer</button> &nbsp;
+          <button (click)="close()" class="btn btn-danger">Annuler</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
